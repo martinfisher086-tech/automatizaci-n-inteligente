@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 
 const links = [
@@ -12,22 +12,22 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [visible, setVisible] = useState(true);
-  const [lastY, setLastY] = useState(0);
+  const lastYRef = useRef(0);
 
   useEffect(() => {
     const onScroll = () => {
       const y = window.scrollY;
       setScrolled(y > 20);
       if (window.innerWidth < 768) {
-        setVisible(y < lastY || y < 60);
+        setVisible(y < lastYRef.current || y < 60);
       } else {
         setVisible(true);
       }
-      setLastY(y);
+      lastYRef.current = y;
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, [lastY]);
+  }, []);
 
   return (
     <nav

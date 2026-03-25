@@ -3,21 +3,25 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const projects = [
   {
     label: "VIDEO LOOM: Demo proyecto 1 — reemplazar con embed",
-    pills: ["n8n", "Claude API", "Supabase"],
-    title: "Pipeline automatizado de calificación de leads",
-    desc: "Redujo el tiempo de seguimiento comercial de 3 horas a 4 minutos diarios.",
+    pills: ["n8n", "Claude API", "WhatsApp"],
+    title: "AI Chatbot para Salones de Belleza",
+    desc: "Chatbot que responde clientes, responde preguntas y captura turnos automáticamente las 24hs.",
+    github: "https://github.com/martinfisher086-tech/chatbot-salon-ia",
   },
   {
     label: "VIDEO LOOM: Demo proyecto 2 — reemplazar con embed",
-    pills: ["Lovable", "n8n", "Airtable"],
-    title: "App de gestión interna con IA",
-    desc: "Dashboard operativo generado automáticamente con datos en tiempo real.",
+    pills: ["n8n", "Claude API", "Supabase"],
+    title: "Análisis de Feedback con IA",
+    desc: "Pipeline que clasifica sentimiento y extrae insights de feedback de clientes sin intervención manual.",
+    github: "https://github.com/martinfisher086-tech/feedback",
   },
   {
     label: "VIDEO LOOM: Demo proyecto 3 — reemplazar con embed",
-    pills: ["n8n", "Google Sheets", "API REST"],
-    title: "Sincronización multi-plataforma",
-    desc: "Integración bidireccional entre 4 herramientas sin intervención manual.",
+    pills: ["Lovable", "Supabase", "n8n"],
+    title: "Plataforma de Gestión para Salón de Belleza",
+    desc: "App completa con panel admin, gestión de turnos y automatizaciones de recordatorios.",
+    // TODO: Agregar URL de GitHub cuando el repo esté listo
+    github: "https://github.com/martinfisher086-tech",
   },
 ];
 
@@ -48,7 +52,7 @@ const ProjectsSection = () => {
                 </div>
                 <h3 className="mb-1 text-base font-bold text-foreground">{p.title}</h3>
                 <p className="mb-3 text-sm text-muted-foreground">{p.desc}</p>
-                <a href="#" className="text-xs font-semibold text-primary hover:underline">Ver en GitHub →</a>
+                <a href={p.github} target="_blank" rel="noopener noreferrer" className="text-xs font-semibold text-primary hover:underline">Ver en GitHub →</a>
               </div>
             </div>
           ))}

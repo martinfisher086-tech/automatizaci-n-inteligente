@@ -12,6 +12,7 @@ const ContactSection = () => {
   const { ref, isVisible } = useScrollAnimation();
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const validate = (fd: FormData) => {
@@ -33,10 +34,11 @@ const ContactSection = () => {
     if (Object.keys(e).length) return;
 
     setLoading(true);
+    setSubmitError(false);
     try {
       const webhookUrl = import.meta.env.VITE_N8N_WEBHOOK_URL;
       if (webhookUrl) {
-        await fetch(webhookUrl, {
+        const res = await fetch(webhookUrl, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -46,10 +48,11 @@ const ContactSection = () => {
             message: fd.get("message"),
           }),
         });
+        if (!res.ok) throw new Error("webhook_error");
       }
       setSuccess(true);
     } catch {
-      setSuccess(true); // show success anyway for demo
+      setSubmitError(true);
     } finally {
       setLoading(false);
     }
@@ -73,6 +76,11 @@ const ContactSection = () => {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-5">
+            {submitError && (
+              <p className="rounded-lg border border-destructive/40 bg-destructive/10 px-4 py-3 text-sm text-destructive">
+                Hubo un error al enviar. Por favor intentá de nuevo o escribime directamente.
+              </p>
+            )}
             <div>
               <input
                 name="name"
@@ -140,7 +148,7 @@ const ContactSection = () => {
 
         <div className="text-center">
           <a
-            href="#"
+            href="https://cal.com/martin-fisher-xnwssv"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block rounded-lg border border-primary px-8 py-3 text-base font-semibold text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
