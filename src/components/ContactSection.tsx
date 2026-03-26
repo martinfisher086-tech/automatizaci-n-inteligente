@@ -3,9 +3,19 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const serviceOptions = [
   "Automatización de procesos",
-  "App con IA",
+  "Sitio web o landing page",
+  "Chatbot para WhatsApp / Telegram",
+  "App o plataforma a medida",
   "Consultoría",
   "No sé aún",
+];
+
+const budgetOptions = [
+  "Menos de $300 USD",
+  "$300 – $800 USD",
+  "$800 – $2.000 USD",
+  "Más de $2.000 USD",
+  "Todavía no lo sé",
 ];
 
 const ContactSection = () => {
@@ -21,6 +31,8 @@ const ContactSection = () => {
     const email = fd.get("email")?.toString().trim() || "";
     if (!email) e.email = "Requerido";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) e.email = "Email inválido";
+    const phone = fd.get("phone")?.toString().trim() || "";
+    if (phone && !/^[+\d\s\-()]{7,20}$/.test(phone)) e.phone = "Teléfono inválido";
     if (!fd.get("service")?.toString()) e.service = "Seleccioná un servicio";
     if (!fd.get("message")?.toString().trim()) e.message = "Requerido";
     return e;
@@ -37,19 +49,23 @@ const ContactSection = () => {
     setSubmitError(false);
     try {
       const webhookUrl = import.meta.env.VITE_N8N_WEBHOOK_URL;
-      if (webhookUrl) {
-        const res = await fetch(webhookUrl, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            name: fd.get("name"),
-            email: fd.get("email"),
-            service: fd.get("service"),
-            message: fd.get("message"),
-          }),
-        });
-        if (!res.ok) throw new Error("webhook_error");
-      }
+      if (!webhookUrl) throw new Error("no_webhook_url");
+      const res = await fetch(webhookUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: fd.get("name"),
+          email: fd.get("email"),
+          phone: fd.get("phone") || null,
+          empresa: fd.get("empresa") || null,
+          service: fd.get("service"),
+          budget: fd.get("budget") || null,
+          message: fd.get("message"),
+          submitted_at: new Date().toISOString(),
+          source: "landing_contacto",
+        }),
+      });
+      if (!res.ok) throw new Error("webhook_error");
       setSuccess(true);
     } catch {
       setSubmitError(true);
@@ -60,7 +76,7 @@ const ContactSection = () => {
 
   return (
     <section id="contacto" className="py-16 md:py-24 bg-[hsl(240_20%_5%)]">
-      <div ref={ref} className={`mx-auto max-w-xl px-6 animate-section ${isVisible ? "visible" : ""}`}>
+      <div ref={ref} className={`mx-auto max-w-2xl px-6 animate-section ${isVisible ? "visible" : ""}`}>
         <h2 className="mb-3 text-center text-3xl font-bold text-foreground md:text-4xl">
           ¿Tenés un proceso que querés automatizar?
         </h2>
@@ -81,47 +97,111 @@ const ContactSection = () => {
                 Hubo un error al enviar. Por favor intentá de nuevo o escribime directamente.
               </p>
             )}
-            <div>
-              <input
-                name="name"
-                placeholder="Nombre completo"
-                maxLength={100}
-                className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none focus:border-primary transition-colors"
-              />
-              {errors.name && <p className="mt-1 text-xs text-destructive">{errors.name}</p>}
+            <div className="grid gap-5 sm:grid-cols-2">
+              <div>
+                <input
+                  id="contact-name"
+                  name="name"
+                  aria-label="Nombre completo"
+                  aria-required="true"
+                  aria-describedby={errors.name ? "err-name" : undefined}
+                  aria-invalid={!!errors.name}
+                  placeholder="Nombre completo *"
+                  maxLength={100}
+                  className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none focus:border-primary transition-colors"
+                />
+                {errors.name && <p id="err-name" className="mt-1 text-xs text-destructive">{errors.name}</p>}
+              </div>
+              <div>
+                <input
+                  id="contact-empresa"
+                  name="empresa"
+                  aria-label="Empresa o negocio (opcional)"
+                  placeholder="Empresa / Negocio (opcional)"
+                  maxLength={100}
+                  className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none focus:border-primary transition-colors"
+                />
+              </div>
             </div>
-            <div>
-              <input
-                name="email"
-                type="email"
-                placeholder="Email"
-                maxLength={255}
-                className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none focus:border-primary transition-colors"
-              />
-              {errors.email && <p className="mt-1 text-xs text-destructive">{errors.email}</p>}
+            <div className="grid gap-5 sm:grid-cols-2">
+              <div>
+                <input
+                  id="contact-email"
+                  name="email"
+                  type="email"
+                  aria-label="Correo electrónico"
+                  aria-required="true"
+                  aria-describedby={errors.email ? "err-email" : undefined}
+                  aria-invalid={!!errors.email}
+                  placeholder="Email *"
+                  maxLength={255}
+                  className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none focus:border-primary transition-colors"
+                />
+                {errors.email && <p id="err-email" className="mt-1 text-xs text-destructive">{errors.email}</p>}
+              </div>
+              <div>
+                <input
+                  id="contact-phone"
+                  name="phone"
+                  type="tel"
+                  aria-label="WhatsApp o teléfono (opcional)"
+                  aria-describedby={errors.phone ? "err-phone" : undefined}
+                  aria-invalid={!!errors.phone}
+                  placeholder="WhatsApp / Teléfono (opcional)"
+                  maxLength={20}
+                  className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none focus:border-primary transition-colors"
+                />
+                {errors.phone && <p id="err-phone" className="mt-1 text-xs text-destructive">{errors.phone}</p>}
+              </div>
             </div>
-            <div>
-              <select
-                name="service"
-                defaultValue=""
-                className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground outline-none focus:border-primary transition-colors"
-              >
-                <option value="" disabled>¿Qué tipo de servicio te interesa?</option>
-                {serviceOptions.map((o) => (
-                  <option key={o} value={o}>{o}</option>
-                ))}
-              </select>
-              {errors.service && <p className="mt-1 text-xs text-destructive">{errors.service}</p>}
+            <div className="grid gap-5 sm:grid-cols-2">
+              <div>
+                <select
+                  id="contact-service"
+                  name="service"
+                  aria-label="Tipo de servicio"
+                  aria-required="true"
+                  aria-describedby={errors.service ? "err-service" : undefined}
+                  aria-invalid={!!errors.service}
+                  defaultValue=""
+                  className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground outline-none focus:border-primary transition-colors"
+                >
+                  <option value="" disabled>¿Qué servicio te interesa? *</option>
+                  {serviceOptions.map((o) => (
+                    <option key={o} value={o}>{o}</option>
+                  ))}
+                </select>
+                {errors.service && <p id="err-service" className="mt-1 text-xs text-destructive">{errors.service}</p>}
+              </div>
+              <div>
+                <select
+                  id="contact-budget"
+                  name="budget"
+                  aria-label="Presupuesto estimado (opcional)"
+                  defaultValue=""
+                  className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground outline-none focus:border-primary transition-colors"
+                >
+                  <option value="" disabled>Presupuesto estimado (opcional)</option>
+                  {budgetOptions.map((o) => (
+                    <option key={o} value={o}>{o}</option>
+                  ))}
+                </select>
+              </div>
             </div>
             <div>
               <textarea
+                id="contact-message"
                 name="message"
+                aria-label="Descripción del proceso o problema"
+                aria-required="true"
+                aria-describedby={errors.message ? "err-message" : undefined}
+                aria-invalid={!!errors.message}
                 rows={4}
                 maxLength={1000}
-                placeholder="Describí brevemente el proceso o problema"
+                placeholder="Describí brevemente el proceso o problema *"
                 className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none focus:border-primary transition-colors resize-none"
               />
-              {errors.message && <p className="mt-1 text-xs text-destructive">{errors.message}</p>}
+              {errors.message && <p id="err-message" className="mt-1 text-xs text-destructive">{errors.message}</p>}
             </div>
             <button
               type="submit"

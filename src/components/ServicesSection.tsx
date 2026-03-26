@@ -1,4 +1,4 @@
-import { Zap, Bot, Map } from "lucide-react";
+import { Zap, Bot, Map, Globe } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const services = [
@@ -9,10 +9,16 @@ const services = [
     tag: "Desde $300 USD",
   },
   {
+    icon: Globe,
+    name: "Sitios web y landing pages",
+    desc: "Diseñamos y construimos sitios profesionales listos para vender: landing pages, portafolios, plataformas a medida.",
+    tag: "Desde $400 USD",
+  },
+  {
     icon: Bot,
-    name: "Apps a medida con IA",
-    desc: "Construimos aplicaciones funcionales con inteligencia artificial integrada, listas en días, no meses.",
-    tag: "Desde $500 USD",
+    name: "Chatbots para WhatsApp y Telegram",
+    desc: "Bots que responden clientes, capturan leads y procesan pedidos 24/7. Integración directa con tu negocio.",
+    tag: "Desde $350 USD",
   },
   {
     icon: Map,
@@ -28,11 +34,11 @@ const ServicesSection = () => {
   return (
     <section id="servicios" className="py-16 md:py-24">
       <div ref={ref} className={`mx-auto max-w-[1280px] px-6 animate-section ${isVisible ? "visible" : ""}`}>
-        <h2 className="mb-3 text-3xl font-bold text-foreground md:text-4xl">¿Qué puedo automatizar para vos?</h2>
+        <h2 className="mb-3 text-3xl font-bold text-foreground md:text-4xl">¿En qué puedo ayudarte?</h2>
         <p className="mb-12 max-w-2xl text-base text-muted-foreground">
-          Tres líneas de trabajo, un mismo objetivo: que tu equipo deje de hacer lo que una máquina puede hacer mejor.
+          Automatización, webs y bots — todo integrado. Un mismo proveedor para que tu negocio funcione solo.
         </p>
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((s) => (
             <div
               key={s.name}

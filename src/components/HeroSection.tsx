@@ -50,8 +50,8 @@ const HeroSection = () => {
                 Antes
               </span>
               <ul className="space-y-3">
-                {beforeItems.map((item, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                {beforeItems.map((item) => (
+                  <li key={item} className="flex items-start gap-2 text-sm text-muted-foreground">
                     <span className="mt-0.5 text-[hsl(0_70%_55%)]">✕</span>
                     {item}
                   </li>
@@ -69,7 +69,7 @@ const HeroSection = () => {
               <ul className="space-y-3">
                 {afterItems.map((item, i) => (
                   <li
-                    key={i}
+                    key={item}
                     className={`flex items-start gap-2 text-sm text-muted-foreground stagger-item ${isVisible ? "visible" : ""}`}
                     style={{ transitionDelay: isVisible ? `${i * 100}ms` : "0ms" }}
                   >

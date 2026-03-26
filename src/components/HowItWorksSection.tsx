@@ -34,8 +34,8 @@ const HowItWorksSection = () => {
           <div className="relative flex flex-col gap-10 md:flex-row md:gap-6">
             {/* Connector line desktop */}
             <div className="absolute top-6 left-6 right-6 hidden h-px bg-border md:block" />
-            {steps.map((s, i) => (
-              <div key={i} className="relative flex flex-1 flex-col items-center text-center">
+            {steps.map((s) => (
+              <div key={s.title} className="relative flex flex-1 flex-col items-center text-center">
                 <div className="z-10 mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-border bg-card">
                   <s.icon size={20} className="text-primary" />
                 </div>

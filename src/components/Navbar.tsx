@@ -56,14 +56,20 @@ const Navbar = () => {
         </div>
 
         {/* Mobile toggle */}
-        <button className="md:hidden text-foreground" onClick={() => setOpen(!open)} aria-label="Menu">
+        <button
+          className="md:hidden text-foreground"
+          onClick={() => setOpen(!open)}
+          aria-label={open ? "Cerrar menú" : "Abrir menú"}
+          aria-expanded={open}
+          aria-controls="mobile-menu"
+        >
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {/* Mobile menu */}
       {open && (
-        <div className="fixed inset-0 top-0 z-40 flex flex-col items-center justify-center gap-8 bg-background md:hidden">
+        <div id="mobile-menu" role="dialog" aria-label="Menú de navegación" className="fixed inset-0 top-0 z-40 flex flex-col items-center justify-center gap-8 bg-background md:hidden">
           <button className="absolute top-4 right-6 text-foreground" onClick={() => setOpen(false)} aria-label="Close">
             <X size={24} />
           </button>

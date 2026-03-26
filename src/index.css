@@ -50,8 +50,10 @@
     @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif;
   }
-  html {
-    scroll-behavior: smooth;
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
   }
 }
 

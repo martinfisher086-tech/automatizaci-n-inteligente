@@ -4,22 +4,22 @@ const projects = [
   {
     label: "VIDEO LOOM: Demo proyecto 1 — reemplazar con embed",
     pills: ["n8n", "Claude API", "WhatsApp"],
-    title: "AI Chatbot para Salones de Belleza",
-    desc: "Chatbot que responde clientes, responde preguntas y captura turnos automáticamente las 24hs.",
+    title: "Chatbot de atención para salón de belleza",
+    desc: "Bot que responde preguntas frecuentes, captura turnos y manda recordatorios automáticos. Disponible en WhatsApp, Telegram o web.",
     github: "https://github.com/martinfisher086-tech/chatbot-salon-ia",
   },
   {
     label: "VIDEO LOOM: Demo proyecto 2 — reemplazar con embed",
-    pills: ["n8n", "Claude API", "Supabase"],
-    title: "Análisis de Feedback con IA",
-    desc: "Pipeline que clasifica sentimiento y extrae insights de feedback de clientes sin intervención manual.",
+    pills: ["n8n", "Claude API", "Google Sheets"],
+    title: "Pipeline de análisis de feedback con IA",
+    desc: "Clasifica automáticamente el sentimiento de reseñas y extrae insights accionables sin intervención manual.",
     github: "https://github.com/martinfisher086-tech/feedback",
   },
   {
     label: "VIDEO LOOM: Demo proyecto 3 — reemplazar con embed",
     pills: ["Lovable", "Supabase", "n8n"],
-    title: "Plataforma de Gestión para Salón de Belleza",
-    desc: "App completa con panel admin, gestión de turnos y automatizaciones de recordatorios.",
+    title: "Sitio web + sistema de gestión para salón",
+    desc: "Web completa con reserva de turnos online, panel de administración y recordatorios automáticos por WhatsApp.",
     // TODO: Agregar URL de GitHub cuando el repo esté listo
     github: "https://github.com/martinfisher086-tech",
   },
@@ -32,10 +32,10 @@ const ProjectsSection = () => {
     <section id="proyectos" className="py-16 md:py-24">
       <div ref={ref} className={`mx-auto max-w-[1280px] px-6 animate-section ${isVisible ? "visible" : ""}`}>
         <h2 className="mb-3 text-3xl font-bold text-foreground md:text-4xl">Proyectos reales</h2>
-        <p className="mb-12 text-base text-muted-foreground">Soluciones construidas y funcionando. Sin demos vacíos.</p>
+        <p className="mb-12 text-base text-muted-foreground">Webs, bots y automatizaciones construidas y funcionando. Sin demos vacíos.</p>
         <div className="grid gap-6 md:grid-cols-3">
-          {projects.map((p, i) => (
-            <div key={i} className="overflow-hidden rounded-xl border border-border bg-card">
+          {projects.map((p) => (
+            <div key={p.title} className="overflow-hidden rounded-xl border border-border bg-card">
               {/* Placeholder 16:9 */}
               <div className="relative w-full bg-[hsl(240_20%_10%)]" style={{ paddingBottom: "56.25%" }}>
                 <span className="absolute inset-0 flex items-center justify-center px-4 text-center text-xs text-muted-foreground">
