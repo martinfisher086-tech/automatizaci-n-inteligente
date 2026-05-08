@@ -3,9 +3,9 @@ import { Menu, X } from "lucide-react";
 
 const links = [
   { label: "Servicios", href: "#servicios" },
-  { label: "Proyectos", href: "#proyectos" },
-  { label: "Cómo trabajo", href: "#como-trabajo" },
-  { label: "Contacto", href: "#contacto" },
+  { label: "Casos", href: "#casos" },
+  { label: "Proceso", href: "#proceso" },
+  { label: "Precios", href: "#precios" },
 ];
 
 const Navbar = () => {
@@ -36,7 +36,7 @@ const Navbar = () => {
       } ${scrolled ? "border-b border-border bg-background/80 backdrop-blur-xl" : "bg-transparent"}`}
     >
       <div className="mx-auto flex max-w-[1280px] items-center justify-between px-6 py-4">
-        <a href="#" className="font-mono text-sm font-semibold text-foreground tracking-tight">
+        <a href="/" className="font-mono text-sm font-semibold text-foreground tracking-tight">
           {"{ automatizaciones.dev }"}
         </a>
 
@@ -57,7 +57,7 @@ const Navbar = () => {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-foreground"
+          className="md:hidden p-2 text-foreground"
           onClick={() => setOpen(!open)}
           aria-label={open ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={open}
@@ -70,7 +70,7 @@ const Navbar = () => {
       {/* Mobile menu */}
       {open && (
         <div id="mobile-menu" role="dialog" aria-label="Menú de navegación" className="fixed inset-0 top-0 z-40 flex flex-col items-center justify-center gap-8 bg-background md:hidden">
-          <button className="absolute top-4 right-6 text-foreground" onClick={() => setOpen(false)} aria-label="Close">
+          <button className="absolute top-4 right-6 p-2 text-foreground" onClick={() => setOpen(false)} aria-label="Cerrar menú">
             <X size={24} />
           </button>
           {links.map((l) => (
