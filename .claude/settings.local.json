@@ -36,7 +36,9 @@
       "Bash(git commit *)",
       "Bash(npx audit-ci *)",
       "Bash(npm install *)",
-      "Bash(npm list *)"
+      "Bash(npm list *)",
+      "Bash(npx vercel *)",
+      "Bash(git push *)"
     ]
   }
 }

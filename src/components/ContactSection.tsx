@@ -56,7 +56,9 @@ const ContactSection = () => {
 
     setLoading(true);
     try {
-      const res = await fetch("/api/contact", {
+      const webhookUrl = import.meta.env.VITE_N8N_WEBHOOK_URL;
+      if (!webhookUrl) throw new Error("no_webhook_url");
+      const res = await fetch(webhookUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         signal: AbortSignal.timeout(10000),
@@ -72,10 +74,14 @@ const ContactSection = () => {
           source: "landing_contacto",
         }),
       });
-      if (!res.ok) throw new Error("api_error");
+      if (!res.ok) throw new Error("webhook_error");
       setSuccess(true);
-    } catch {
-      setSubmitError("Hubo un error al enviar.");
+    } catch (err) {
+      if (err instanceof Error && err.message === "no_webhook_url") {
+        setSubmitError("El formulario no está configurado aún. Escribime por WhatsApp.");
+      } else {
+        setSubmitError("Hubo un error al enviar. Intentá de nuevo o escribime por WhatsApp.");
+      }
     } finally {
       setLoading(false);
     }
@@ -97,18 +103,10 @@ const ContactSection = () => {
         </ul>
 
         {success ? (
-          <div className="rounded-xl border border-[hsl(var(--success-subtle))] bg-card p-8 text-center space-y-4">
+          <div className="rounded-xl border border-[hsl(var(--success-subtle))] bg-card p-8 text-center">
             <p className="text-lg font-semibold text-[hsl(var(--success-foreground))]">
-              ¡Consulta enviada! Revisá tu email — te escribo en menos de 24 horas para coordinar la llamada de 20 minutos.
+              ¡Consulta enviada! Te escribo en menos de 24 horas.
             </p>
-            <a
-              href="https://cal.com/martin-fisher-xnwssv"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block rounded-lg border border-primary px-6 py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-            >
-              O agendá ahora directamente en mi calendario<span aria-hidden="true"> →</span>
-            </a>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-5">
@@ -124,16 +122,7 @@ const ContactSection = () => {
 
             {submitError && (
               <p className="rounded-lg border border-destructive/40 bg-destructive/10 px-4 py-3 text-sm text-destructive">
-                {submitError}{" "}
-                <a
-                  href="https://cal.com/martin-fisher-xnwssv"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline underline-offset-2 hover:opacity-80"
-                >
-                  Agendá tu llamada directamente
-                </a>
-                .
+                {submitError}
               </p>
             )}
 
@@ -260,23 +249,6 @@ const ContactSection = () => {
           </form>
         )}
 
-        <div className="my-8 flex items-center gap-4">
-          <div className="h-px flex-1 bg-border" aria-hidden="true" />
-          <span className="text-sm text-muted-foreground">ó</span>
-          <div className="h-px flex-1 bg-border" aria-hidden="true" />
-        </div>
-
-        <div className="text-center">
-          <a
-            href="https://cal.com/martin-fisher-xnwssv"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block rounded-lg border border-primary px-8 py-3 text-base font-semibold text-primary transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-          >
-            Agendar llamada directamente en mi calendario<span aria-hidden="true"> →</span>
-          </a>
-          <p className="mt-2 text-xs text-muted-foreground">(Abre Cal.com en nueva pestaña)</p>
-        </div>
       </div>
     </section>
   );
