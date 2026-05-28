@@ -70,10 +70,10 @@ const PricingSection = () => {
           {tiers.map((t) => (
             <article
               key={t.name}
-              className={`relative flex flex-col gap-3 rounded-2xl border p-8 transition-all duration-300 ${
+              className={`group relative flex flex-col gap-3 rounded-2xl border p-8 transition-all duration-300 ease-out ${
                 t.featured
-                  ? "border-primary/50 bg-card tier-glow md:-translate-y-2"
-                  : "border-border bg-card"
+                  ? "border-primary/50 bg-card tier-glow md:-translate-y-2 hover:-translate-y-4 hover:border-primary/80 hover:shadow-[0_0_56px_-8px_hsl(174_80%_52%/0.7)]"
+                  : "border-border bg-card hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_0_32px_-8px_hsl(174_80%_52%/0.3)]"
               }`}
             >
               {t.featured && (
@@ -104,10 +104,10 @@ const PricingSection = () => {
 
               <a
                 href="#contacto"
-                className={`mt-4 inline-block w-full rounded-lg py-3.5 text-center text-base font-semibold transition-all ${
+                className={`mt-4 inline-block w-full rounded-lg py-3.5 text-center text-base font-semibold transition-all duration-200 ${
                   t.featured
-                    ? "bg-primary text-primary-foreground hover:opacity-90"
-                    : "border border-border text-foreground hover:border-primary/50 hover:text-primary"
+                    ? "bg-primary text-primary-foreground hover:opacity-90 group-hover:shadow-[0_0_20px_-4px_hsl(174_80%_52%/0.6)]"
+                    : "border border-border text-foreground hover:border-primary/60 hover:text-primary hover:bg-primary/5"
                 }`}
               >
                 {t.cta} →

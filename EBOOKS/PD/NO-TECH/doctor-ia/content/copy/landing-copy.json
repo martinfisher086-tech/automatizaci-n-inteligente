@@ -1,0 +1,227 @@
+{
+  "product": {
+    "name_es": "Tu Mente, Tu Salud: 7 Herramientas de Bienestar Emocional",
+    "name_en": "Your Mind, Your Health: 7 Emotional Wellness Tools",
+    "price": 17,
+    "currency": "USD"
+  },
+  "hero": {
+    "headline_es": [
+      "Deja de sobrevivir tus emociones. Empieza a entenderlas.",
+      "Tu ansiedad, tu estrés, tu agotamiento — tienen solución. Y caben en 7 herramientas.",
+      "Llevas años cargando lo que nadie te enseñó a soltar."
+    ],
+    "headline_en": [
+      "Stop surviving your emotions. Start understanding them.",
+      "Your anxiety, your stress, your exhaustion — there's a solution. And it fits in 7 tools.",
+      "You've spent years carrying what nobody taught you to release."
+    ],
+    "subheadline_es": "Una guía práctica y basada en ciencia para mujeres que están hartas de sentirse abrumadas y listas para recuperar su equilibrio emocional — sin terapia de años ni presupuestos imposibles.",
+    "subheadline_en": "A practical, science-backed guide for women who are tired of feeling overwhelmed and ready to reclaim their emotional balance — without years of therapy or impossible budgets.",
+    "cta_primary_es": "Quiero mis 7 herramientas — $17",
+    "cta_primary_en": "I want my 7 tools — $17"
+  },
+  "pain_section": {
+    "intro_es": "Seamos honestas. Así se ve un día normal para demasiadas de nosotras:",
+    "intro_en": "Let's be honest. This is what a normal day looks like for too many of us:",
+    "pain_points_es": [
+      "Te despiertas cansada aunque dormiste 8 horas — y ya ni recuerdas la última vez que amaneciste descansada.",
+      "Tu mente no para. Hay pensamientos de todo lo que puede salir mal, de lo que dijiste, de lo que deberías hacer diferente.",
+      "Dices que sí cuando quieres decir que no, y después te comes la ira sola, en silencio.",
+      "Sientes que todos a tu alrededor están bien y tú eres la única que lleva este peso invisible.",
+      "Ya intentaste meditación, podcasts, frases motivacionales — pero nada dura más de tres días."
+    ],
+    "pain_points_en": [
+      "You wake up exhausted even after 8 hours of sleep — and you can't remember the last time you actually felt rested.",
+      "Your mind won't stop. There are thoughts about everything that could go wrong, what you said, what you should have done differently.",
+      "You say yes when you mean no, then swallow the anger alone, in silence.",
+      "Everyone around you seems fine and you're the only one carrying this invisible weight.",
+      "You've tried meditation, podcasts, motivational quotes — but nothing lasts more than three days."
+    ]
+  },
+  "solution_section": {
+    "title_es": "No estás rota. Nunca te enseñaron las herramientas.",
+    "title_en": "You're not broken. You were just never given the tools.",
+    "description_es": "Tu Mente, Tu Salud no es otro libro de autoayuda con frases bonitas. Es una guía práctica con 7 herramientas respaldadas por la ciencia — neurociencia, psicología cognitiva, regulación del sistema nervioso — adaptadas para mujeres reales con vidas reales. Sin jerga clínica. Sin juicio. Con resultados que sientes desde el primer capítulo.",
+    "description_en": "Your Mind, Your Health is not another self-help book with pretty quotes. It's a practical guide with 7 science-backed tools — neuroscience, cognitive psychology, nervous system regulation — adapted for real women with real lives. No clinical jargon. No judgment. With results you feel from the very first chapter."
+  },
+  "benefits": {
+    "title_es": "Lo que cambia cuando tienes las herramientas correctas",
+    "title_en": "What changes when you have the right tools",
+    "items": [
+      {
+        "benefit_es": "Reconoces tus emociones antes de que te controlen — y sabes exactamente qué hacer con ellas.",
+        "benefit_en": "You recognize your emotions before they control you — and you know exactly what to do with them.",
+        "icon": "🧭"
+      },
+      {
+        "benefit_es": "Tienes técnicas de regulación del sistema nervioso que funcionan en 2-5 minutos, en cualquier lugar.",
+        "benefit_en": "You have nervous system regulation techniques that work in 2-5 minutes, anywhere.",
+        "icon": "⚡"
+      },
+      {
+        "benefit_es": "Aprendes a poner límites sin culpa y sin destruir tus relaciones.",
+        "benefit_en": "You learn to set boundaries without guilt and without destroying your relationships.",
+        "icon": "🛡️"
+      },
+      {
+        "benefit_es": "Entiendes por qué tu mente hace lo que hace — y eso solo, ya reduce el miedo a la mitad.",
+        "benefit_en": "You understand why your mind does what it does — and that alone cuts the fear in half.",
+        "icon": "🧠"
+      },
+      {
+        "benefit_es": "Construyes una rutina emocional de 10 minutos que sostiene tu bienestar a largo plazo.",
+        "benefit_en": "You build a 10-minute emotional routine that sustains your wellness long-term.",
+        "icon": "🌅"
+      },
+      {
+        "benefit_es": "Sales del ciclo culpa-autocrítica-parálisis y empiezas a avanzar desde la autocompasión real.",
+        "benefit_en": "You break the guilt-self-criticism-paralysis cycle and start moving forward from real self-compassion.",
+        "icon": "💛"
+      },
+      {
+        "benefit_es": "Tienes un lenguaje emocional que mejora tu comunicación contigo misma y con los demás.",
+        "benefit_en": "You have an emotional language that improves how you communicate with yourself and others.",
+        "icon": "💬"
+      }
+    ]
+  },
+  "chapters_preview": {
+    "title_es": "Las 7 herramientas — lo que encontrarás adentro",
+    "title_en": "The 7 tools — what you'll find inside",
+    "chapters": [
+      {
+        "number": 1,
+        "title_es": "Herramienta 1: Conciencia Emocional — Conoce lo que sientes antes de que explote",
+        "title_en": "Tool 1: Emotional Awareness — Know what you feel before it explodes",
+        "teaser_es": "Aprende a leer las señales de tu cuerpo y mente antes de llegar al punto de quiebre. Incluye la rueda de emociones completa y el ejercicio de check-in de 3 minutos.",
+        "teaser_en": "Learn to read your body and mind's signals before reaching the breaking point. Includes the full feelings wheel and the 3-minute check-in exercise."
+      },
+      {
+        "number": 2,
+        "title_es": "Herramienta 2: Regulación del Sistema Nervioso — Tu botón de pausa interno",
+        "title_en": "Tool 2: Nervous System Regulation — Your internal pause button",
+        "teaser_es": "Tres técnicas basadas en neurociencia que bajan la activación del estrés en minutos. Respiración, activación vagal y anclaje físico — explicados sin complicaciones.",
+        "teaser_en": "Three neuroscience-based techniques that lower stress activation in minutes. Breathing, vagal activation, and physical anchoring — explained without complications."
+      },
+      {
+        "number": 3,
+        "title_es": "Herramienta 3: Límites Saludables — Di lo que necesitas sin perder lo que amas",
+        "title_en": "Tool 3: Healthy Boundaries — Say what you need without losing what you love",
+        "teaser_es": "Por qué decir no es un acto de amor propio, no de egoísmo. Guiones reales para situaciones reales: familia, trabajo, pareja, amistades.",
+        "teaser_en": "Why saying no is an act of self-love, not selfishness. Real scripts for real situations: family, work, relationships, friendships."
+      },
+      {
+        "number": 4,
+        "title_es": "Herramienta 4: Manejo de la Ansiedad — Deja de luchar contra tu mente",
+        "title_en": "Tool 4: Anxiety Management — Stop fighting your mind",
+        "teaser_es": "Cómo distinguir entre ansiedad funcional y ansiedad que te paraliza, y el protocolo de 5 pasos para desactivar una espiral de pensamientos antes de que tome el control.",
+        "teaser_en": "How to tell the difference between functional anxiety and the kind that paralyzes you, plus the 5-step protocol to shut down a thought spiral before it takes over."
+      },
+      {
+        "number": 5,
+        "title_es": "Herramienta 5: Autocompasión Activa — Sé tu propia aliada, no tu crítica",
+        "title_en": "Tool 5: Active Self-Compassion — Be your own ally, not your critic",
+        "teaser_es": "La diferencia entre autocompasión real y autoindulgencia, con el protocolo de Kristin Neff adaptado en 3 pasos que puedes aplicar en cualquier momento de dolor.",
+        "teaser_en": "The difference between real self-compassion and self-indulgence, with Kristin Neff's adapted 3-step protocol you can apply in any moment of pain."
+      },
+      {
+        "number": 6,
+        "title_es": "Herramienta 6: Resiliencia Emocional — Cómo recuperarte (de verdad) del agotamiento",
+        "title_en": "Tool 6: Emotional Resilience — How to truly recover from exhaustion",
+        "teaser_es": "El plan de recuperación del burnout en 4 fases, por qué el descanso solo no es suficiente, y cómo construir una reserva emocional que te sostenga en tiempos difíciles.",
+        "teaser_en": "The 4-phase burnout recovery plan, why rest alone isn't enough, and how to build an emotional reserve that carries you through difficult times."
+      },
+      {
+        "number": 7,
+        "title_es": "Herramienta 7: Tu Rutina Emocional Diaria — El sistema que lo sostiene todo",
+        "title_en": "Tool 7: Your Daily Emotional Routine — The system that holds it all together",
+        "teaser_es": "Cómo diseñar una práctica de bienestar emocional de 10 minutos diarios que se mantenga en la vida real — incluyendo la versión de 2 minutos para días imposibles.",
+        "teaser_en": "How to design a 10-minute daily emotional wellness practice that holds up in real life — including the 2-minute version for impossible days."
+      }
+    ]
+  },
+  "social_proof": {
+    "title_es": "Lo que dicen quienes ya tomaron el primer paso",
+    "title_en": "What those who took the first step are saying",
+    "testimonials": [
+      {
+        "name": "Valeria M.",
+        "location": "Ciudad de México, México",
+        "text_es": "Llevaba tres años yendo a terapia y sintiéndome igual de perdida. Este ebook me dio un lenguaje para entender lo que me pasaba y herramientas que puedo usar sola, en el momento. La herramienta #2 ya la uso casi todos los días.",
+        "text_en": "I'd been in therapy for three years and still felt just as lost. This ebook gave me a language to understand what was happening to me and tools I can use on my own, in the moment. Tool #2 is already part of my daily life.",
+        "rating": 5
+      },
+      {
+        "name": "Andrea R.",
+        "location": "Miami, Florida, USA",
+        "text_es": "Pensé que era otro libro de 'piensa positivo'. No. Es completamente práctico. El capítulo de límites cambió cómo me comunico con mi mamá y con mi jefe. Literalmente en la misma semana.",
+        "text_en": "I thought it was going to be another 'think positive' book. It wasn't. It's completely practical. The boundaries chapter changed how I communicate with my mom and my boss. In the same week.",
+        "rating": 5
+      },
+      {
+        "name": "Camila T.",
+        "location": "Bogotá, Colombia",
+        "text_es": "Me compré el ebook en un momento de crisis total — sin dormir, con ataques de ansiedad frecuentes. La herramienta de regulación del sistema nervioso fue lo primero que funcionó de verdad. Son $17 que no me arrepiento.",
+        "text_en": "I bought the ebook in a total crisis moment — not sleeping, frequent anxiety attacks. The nervous system regulation tool was the first thing that actually worked. It's $17 I don't regret.",
+        "rating": 5
+      }
+    ]
+  },
+  "faq": {
+    "title_es": "Preguntas frecuentes",
+    "title_en": "Frequently asked questions",
+    "items": [
+      {
+        "q_es": "¿Esto es terapia? ¿Reemplaza a un profesional de salud mental?",
+        "q_en": "Is this therapy? Does it replace a mental health professional?",
+        "a_es": "No, y es importante decirlo claramente. Este ebook es una guía educativa con herramientas de bienestar emocional basadas en ciencia. No es terapia, no reemplaza el diagnóstico ni el tratamiento de un profesional de salud mental. Si estás en crisis o sientes que tus síntomas son severos, por favor busca apoyo profesional. Este recurso está diseñado como complemento — para quienes quieren herramientas prácticas entre sesiones o para quienes dan sus primeros pasos hacia el bienestar emocional.",
+        "a_en": "No, and it's important to say that clearly. This ebook is an educational guide with science-based emotional wellness tools. It is not therapy, and it does not replace a mental health professional's diagnosis or treatment. If you are in crisis or feel your symptoms are severe, please seek professional support. This resource is designed as a complement — for those who want practical tools between sessions or for those taking their first steps toward emotional wellness."
+      },
+      {
+        "q_es": "¿Necesito conocimientos previos de psicología para entender el ebook?",
+        "q_en": "Do I need prior psychology knowledge to understand the ebook?",
+        "a_es": "Para nada. Está escrito en lenguaje accesible, sin jerga clínica. Si puedes seguir una receta de cocina, puedes seguir las herramientas de este ebook. Cada concepto científico está explicado en términos simples y aplicados.",
+        "a_en": "Not at all. It's written in accessible language, without clinical jargon. If you can follow a recipe, you can follow the tools in this ebook. Every scientific concept is explained in simple, applied terms."
+      },
+      {
+        "q_es": "¿En cuánto tiempo veré resultados?",
+        "q_en": "How quickly will I see results?",
+        "a_es": "La herramienta de regulación del sistema nervioso (Herramienta 2) produce cambios fisiológicos medibles en 2-5 minutos. Las herramientas de mayor profundidad — como los límites o la resiliencia — requieren práctica constante de 1-2 semanas para notar cambios sostenidos. El bienestar emocional es un proceso, no un evento, y este ebook te da el sistema para que ese proceso sea real.",
+        "a_en": "The nervous system regulation tool (Tool 2) produces measurable physiological changes in 2-5 minutes. The deeper tools — like boundaries or resilience — require consistent practice over 1-2 weeks to notice sustained changes. Emotional wellness is a process, not an event, and this ebook gives you the system to make that process real."
+      },
+      {
+        "q_es": "¿Está disponible en inglés y en español?",
+        "q_en": "Is it available in both English and Spanish?",
+        "a_es": "Sí. El ebook completo está disponible en ambos idiomas. Al comprar, recibes acceso a las dos versiones.",
+        "a_en": "Yes. The full ebook is available in both languages. When you purchase, you get access to both versions."
+      },
+      {
+        "q_es": "¿Cómo recibo el ebook después de comprar?",
+        "q_en": "How do I receive the ebook after purchase?",
+        "a_es": "Inmediatamente después de tu compra recibes un correo con el enlace de descarga directa en formato PDF. No hay espera. Es tuyo para siempre — sin suscripciones, sin renovaciones.",
+        "a_en": "Immediately after your purchase you receive an email with a direct download link in PDF format. No waiting. It's yours forever — no subscriptions, no renewals."
+      },
+      {
+        "q_es": "¿Qué pasa si no me sirve?",
+        "q_en": "What if it doesn't work for me?",
+        "a_es": "Tienes 30 días de garantía de devolución total, sin preguntas. Si sientes que el ebook no te aportó valor, escríbenos y te devolvemos el dinero completo. Así de simple. Queremos que esto sea un sí sin riesgo.",
+        "a_en": "You have a 30-day full money-back guarantee, no questions asked. If you feel the ebook didn't bring you value, write to us and we'll refund you in full. That simple. We want this to be a risk-free yes."
+      }
+    ]
+  },
+  "cta_section": {
+    "title_es": "Empieza hoy. Tu bienestar emocional no puede esperar otro año.",
+    "title_en": "Start today. Your emotional wellness can't wait another year.",
+    "guarantee_es": "Garantía de devolución de 30 días. Sin preguntas.",
+    "guarantee_en": "30-day money-back guarantee. No questions asked.",
+    "cta_button_es": "Sí, quiero mis 7 herramientas — Solo $17",
+    "cta_button_en": "Yes, I want my 7 tools — Just $17",
+    "urgency_es": "Precio de lanzamiento: $17 USD. Acceso inmediato. PDF descargable. Disponible en español e inglés.",
+    "urgency_en": "Launch price: $17 USD. Instant access. Downloadable PDF. Available in Spanish and English."
+  },
+  "disclaimer": {
+    "es": "Este contenido es solo para fines educativos e informativos. No constituye asesoramiento médico, diagnóstico ni tratamiento. Si estás en crisis, por favor contacta a un profesional de salud mental o llama a una línea de crisis en tu país.",
+    "en": "This content is for educational and informational purposes only. It does not constitute medical advice, diagnosis, or treatment. If you are in crisis, please contact a mental health professional or call a crisis line in your country."
+  }
+}

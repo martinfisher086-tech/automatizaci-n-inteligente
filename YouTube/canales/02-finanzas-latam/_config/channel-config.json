@@ -1,0 +1,46 @@
+{
+  "canal_id": "02-finanzas-latam",
+  "nombre_canal": "Finanzas LATAM",
+  "nombre_opciones": ["Finanzas LATAM", "Plata Inteligente", "Invierte desde Cero", "El Peso y el Dólar"],
+  "nicho": "Finanzas personales e inversiones para profesionales y millennials LATAM",
+  "subnicho_foco": "Inversión para trabajadores independientes y freelancers en LATAM",
+  "pais_objetivo_primario": "Argentina, México, Colombia, Chile",
+  "idioma": "es-latam",
+  "tono": "directo, sin condescendencia, honesto sobre riesgos, anti-guru",
+
+  "voice_config": {
+    "provider": "ElevenLabs",
+    "voice_id": "PENDIENTE_CONFIGURAR",
+    "voice_descripcion": "Voz masculina/femenina, acento neutro LATAM, tono sereno pero energético",
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "speaking_rate": "normal (150 ppm)"
+  },
+
+  "visual_style": {
+    "paleta_primaria": "#1A1A2E",
+    "paleta_acento": "#00B4D8",
+    "paleta_exito": "#06D6A0",
+    "paleta_alerta": "#FFD166",
+    "fuente_titulos": "Inter Bold",
+    "estilo_imagenes": "profesional, datos, gráficos, personas reales LATAM, no imágenes de stock americano genérico",
+    "estilo_thumbnail": "persona expresiva + número grande + fondo oscuro con gradiente azul"
+  },
+
+  "publicacion": {
+    "frecuencia_long_form": "1 vez por semana",
+    "dia_publicacion": "martes",
+    "hora_publicacion": "18:00",
+    "timezone": "America/Argentina/Buenos_Aires",
+    "frecuencia_shorts": "1 por video largo (mismo día)"
+  },
+
+  "apis": {
+    "youtube_channel_id": "PENDIENTE",
+    "elevenlabs_voice_id": "PENDIENTE",
+    "openai_api_key": "COMPARTIDA_CON_OTROS_CANALES"
+  },
+
+  "monetizacion_primaria": ["AdSense (CPM $12-25)", "Afiliados fintech", "Curso propio (Mes 6+)"],
+  "afiliados_activos": ["Wise", "Payoneer", "Binance", "Bitso", "broker_por_pais"]
+}

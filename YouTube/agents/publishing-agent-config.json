@@ -1,0 +1,72 @@
+{
+  "agent": "publishing-agent",
+  "description": "Publica el video final en YouTube y distribuye clips en plataformas secundarias",
+  "trigger": "Webhook desde Video Assembly pipeline (video-final.mp4 listo en Drive)",
+
+  "youtube_config": {
+    "api": "YouTube Data API v3",
+    "scope": "https://www.googleapis.com/auth/youtube.upload",
+    "default_schedule": {
+      "day": "tuesday_thursday",
+      "time": "18:00",
+      "timezone": "America/Argentina/Buenos_Aires",
+      "notes": "Martes y jueves 18:00 Argentina = horario pico audiencia LATAM"
+    },
+    "video_defaults": {
+      "category_id": "27",
+      "category_name": "Education",
+      "language": "es",
+      "privacy": "private",
+      "notes": "Publicar como privado primero, luego scheduled para la hora óptima"
+    }
+  },
+
+  "metadata_agent": {
+    "description": "Genera metadata SEO para el video usando Claude",
+    "prompt": "Dado el guión de este video de YouTube sobre automatización con IA para PYMES LATAM, genera:\n1. Título SEO (max 60 chars, incluir keyword principal al inicio)\n2. Descripción (max 5000 chars): primer párrafo con keyword, timestamps, links de afiliados, link a consultoría, links a redes sociales\n3. Tags: 15-20 tags (mezcla de broad y específicos)\n4. Capítulos: timestamps cada 90-120 segundos con descripción\n\nGuión:\n{{script_content}}\n\nAfiliados a incluir:\n{{affiliate_links}}",
+    "output_fields": ["title", "description", "tags", "chapters"]
+  },
+
+  "shorts_config": {
+    "enabled": true,
+    "source": "primeros 60 segundos del video (hook)",
+    "format": "vertical 9:16",
+    "ffmpeg_command": "ffmpeg -i input.mp4 -vf 'crop=ih*9/16:ih,scale=1080:1920' -t 60 short.mp4",
+    "title_prefix": "#Shorts — ",
+    "auto_publish": true
+  },
+
+  "distribution": {
+    "instagram_reels": {
+      "enabled": false,
+      "notes": "Requiere Instagram Graph API — activar en Sprint 3",
+      "clip_duration_seconds": 90
+    },
+    "tiktok": {
+      "enabled": false,
+      "notes": "Requiere TikTok API — activar en Sprint 3",
+      "clip_duration_seconds": 90
+    },
+    "twitter_thread": {
+      "enabled": false,
+      "notes": "Requiere Twitter API v2 — activar en Sprint 3"
+    }
+  },
+
+  "n8n_workflow": {
+    "step_1": "Recibir ruta de video-final.mp4 y guión desde Video Assembly",
+    "step_2": "Metadata Agent (Claude) → title, description, tags, chapters",
+    "step_3": "FFmpeg → cortar Short (primeros 60s, formato vertical)",
+    "step_4": "YouTube Data API v3 → upload video principal como privado",
+    "step_5": "YouTube Data API v3 → update metadata + scheduled time",
+    "step_6": "YouTube Data API v3 → upload Short",
+    "step_7": "Gmail MCP → notificar al creador con link del video",
+    "step_8": "Google Sheets → registrar video en dashboard (título, fecha pub, URL)"
+  },
+
+  "notifications": {
+    "on_upload_success": "Gmail: 'Video programado: {{title}} — se publica el {{scheduled_date}}'",
+    "on_upload_error": "Gmail: 'ERROR en publicación: {{error_message}}'",
+    "on_1000_views": "Gmail: 'Milestone: {{title}} llegó a 1000 views'"
+  }
+}

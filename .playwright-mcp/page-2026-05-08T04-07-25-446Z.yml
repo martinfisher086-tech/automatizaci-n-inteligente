@@ -1,0 +1,370 @@
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - generic [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e5]:
+        - 'link "{ automatizaciones.dev }" [ref=e6] [cursor=pointer]':
+          - /url: /
+        - generic [ref=e7]:
+          - link "Servicios" [ref=e8] [cursor=pointer]:
+            - /url: "#servicios"
+          - link "Casos" [ref=e9] [cursor=pointer]:
+            - /url: "#casos"
+          - link "Proceso" [ref=e10] [cursor=pointer]:
+            - /url: "#proceso"
+          - link "Precios" [ref=e11] [cursor=pointer]:
+            - /url: "#precios"
+          - link "Agendar llamada" [ref=e12] [cursor=pointer]:
+            - /url: "#contacto"
+    - main [ref=e13]:
+      - generic [ref=e15]:
+        - generic [ref=e16]:
+          - generic [ref=e18]:
+            - generic [ref=e20]: SYSTEM ONLINE
+            - generic [ref=e21]: ·
+            - generic [ref=e22]: Respondo en < 24h
+          - heading "Procesos repetitivos que trabajan solos." [level=1] [ref=e23]:
+            - text: Procesos repetitivos
+            - text: que trabajan solos.
+          - paragraph [ref=e24]: Automatizaciones, chatbots con IA y sistemas web que se integran con cómo trabaja tu equipo. Construidos en 5–10 días.
+          - generic [ref=e25]:
+            - link "Agendar diagnóstico gratuito" [ref=e26] [cursor=pointer]:
+              - /url: "#contacto"
+              - text: Agendar diagnóstico gratuito
+              - img [ref=e27]
+            - link "Ver workflows" [ref=e29] [cursor=pointer]:
+              - /url: "#casos"
+          - generic [ref=e30]:
+            - generic [ref=e31]:
+              - generic [ref=e32]: "+12"
+              - generic [ref=e33]: Procesos automatizados
+            - generic [ref=e35]:
+              - generic [ref=e36]: 5–10d
+              - generic [ref=e37]: Tiempo de entrega
+            - generic [ref=e39]:
+              - generic [ref=e40]: 30d
+              - generic [ref=e41]: Soporte incluido
+        - generic [ref=e42]:
+          - generic [ref=e43]:
+            - generic [ref=e48]: ~/automatizaciones · n8n
+            - generic "Simulación de workflow n8n" [ref=e49]:
+              - generic [ref=e50]: ▊
+          - generic [ref=e51]:
+            - generic [ref=e52]: n8n
+            - generic [ref=e53]: Claude
+            - generic [ref=e54]: WhatsApp
+            - generic [ref=e55]: Supabase
+      - region "Lo que construyo para vos" [ref=e56]:
+        - generic [ref=e57]:
+          - generic [ref=e58]:
+            - generic [ref=e59]: Servicios
+            - heading "Lo que construyo para vos" [level=2] [ref=e60]
+            - paragraph [ref=e61]: Cuatro líneas de trabajo. Todas se pueden combinar en un mismo proyecto.
+          - generic [ref=e62]:
+            - generic [ref=e63]:
+              - img [ref=e64]
+              - heading "Automatización de procesos" [level=3] [ref=e66]
+              - paragraph [ref=e67]: n8n, integraciones, workflows que conectan Google Sheets, WhatsApp, Gmail y tu CRM.
+              - generic [ref=e68]: Desde $300 USD
+            - generic [ref=e69]:
+              - img [ref=e70]
+              - heading "Chatbots con IA" [level=3] [ref=e73]
+              - paragraph [ref=e74]: Atención 24/7 con Claude o GPT. Responden, califican y agendan — integrados a tu CRM.
+              - generic [ref=e75]: Desde $500 USD
+            - generic [ref=e76]:
+              - img [ref=e77]
+              - heading "Consultoría de automatización" [level=3] [ref=e79]
+              - paragraph [ref=e80]: Diagnóstico de procesos, mapeo de flujos y plan de implementación priorizado por ROI.
+              - generic [ref=e81]: Desde $200 USD / hora
+            - generic [ref=e82]:
+              - img [ref=e83]
+              - heading "Webs y landing pages" [level=3] [ref=e86]
+              - paragraph [ref=e87]: Sitios profesionales con Lovable, integrados a tus automatizaciones desde el día uno.
+              - generic [ref=e88]: Desde $400 USD
+      - region "Tres pasos. Cero sorpresas." [ref=e89]:
+        - generic [ref=e90]:
+          - generic [ref=e91]:
+            - generic [ref=e92]: Proceso
+            - heading "Tres pasos. Cero sorpresas." [level=2] [ref=e93]
+          - generic [ref=e94]:
+            - generic [ref=e95]:
+              - generic [ref=e96]: "01"
+              - img [ref=e97]
+              - heading "Diagnóstico" [level=3] [ref=e100]
+              - paragraph [ref=e101]: Llamada de 20 min. Identificamos el proceso que más tiempo te quita y diseñamos la solución.
+            - generic [ref=e102]:
+              - generic [ref=e103]: "02"
+              - img [ref=e104]
+              - heading "Construcción" [level=3] [ref=e107]
+              - paragraph [ref=e108]: Construyo la automatización en 5–10 días. Iteramos sobre prototipos reales, no PowerPoints.
+            - generic [ref=e109]:
+              - generic [ref=e110]: "03"
+              - img [ref=e111]
+              - heading "Entrega + soporte" [level=3] [ref=e114]
+              - paragraph [ref=e115]: Documentación, training a tu equipo y 30 días de soporte incluidos. Después seguimos si querés.
+      - region "No soy una agencia. Soy una persona que se hace cargo." [ref=e116]:
+        - generic [ref=e118]:
+          - img "Juan Manuel Castillo — especialista en automatización con IA" [ref=e122]
+          - generic [ref=e123]:
+            - generic [ref=e124]: Sobre mí
+            - heading "No soy una agencia. Soy una persona que se hace cargo." [level=2] [ref=e125]:
+              - text: No soy una agencia.
+              - text: Soy una persona que se hace cargo.
+            - paragraph [ref=e126]: Hola, soy Juan Manuel. Construyo automatizaciones y sistemas con IA para PYMES de LATAM. Vengo de +5 años trabajando en procesos de negocio — sé qué duele y qué realmente mueve la aguja.
+            - list [ref=e127]:
+              - listitem [ref=e128]:
+                - img [ref=e129]
+                - text: Hablás conmigo, no con un PM intermediario
+              - listitem [ref=e132]:
+                - img [ref=e133]
+                - text: Te entrego sistemas que tu equipo entiende y mantiene
+              - listitem [ref=e136]:
+                - img [ref=e137]
+                - text: Sin propuestas de 6 meses ni presupuestos opacos
+            - generic [ref=e140]:
+              - link "GitHub de Juan Manuel Castillo" [ref=e141] [cursor=pointer]:
+                - /url: https://github.com/martinfisher086-tech
+                - img [ref=e142]
+                - text: GitHub
+              - link "LinkedIn de Juan Manuel Castillo" [ref=e145] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/juan-manuel-castillo-4a8585360/
+                - img [ref=e146]
+                - text: LinkedIn
+      - region "Sistemas corriendo ahora mismo." [ref=e150]:
+        - generic [ref=e151]:
+          - generic [ref=e152]:
+            - generic [ref=e153]: Casos en producción
+            - heading "Sistemas corriendo ahora mismo." [level=2] [ref=e154]
+            - paragraph [ref=e155]: Workflows reales, no slides.
+          - article [ref=e156]:
+            - generic [ref=e157]:
+              - generic [ref=e158]:
+                - generic [ref=e163]: n8n · workflow editor · bella-chatbot
+                - img "Workflow n8n del chatbot de Bella" [ref=e164]
+              - generic [ref=e165]:
+                - img "Sitio web de Bella conectado al mismo backend" [ref=e166]
+                - generic [ref=e167]: ↑ sitio del salón conectado al mismo backend
+            - generic [ref=e168]:
+              - generic [ref=e169]: Salón de belleza · CABA
+              - heading "Bella — chatbot que agenda citas en WhatsApp" [level=3] [ref=e170]
+              - paragraph [ref=e171]: La clienta escribe por WhatsApp, el agente IA detecta la intención, consulta horarios disponibles, distingue cliente nuevo vs existente y crea la cita. Todo conectado a la base de servicios y la agenda real del salón.
+              - paragraph [ref=e172]: "Antes: la dueña perdía clientes los domingos a la noche y respondía mensajes mientras cortaba el pelo. Ahora: el bot atiende, agenda y solo le pasa los casos complejos. El sitio web del salón se conecta al mismo backend, así que servicios y precios se mantienen sincronizados."
+              - generic [ref=e173]:
+                - generic [ref=e174]:
+                  - generic [ref=e175]: 24/7
+                  - generic [ref=e176]: agendamiento sin intervención humana
+                - generic [ref=e177]:
+                  - generic [ref=e178]: ~30s
+                  - generic [ref=e179]: tiempo de respuesta
+                - generic [ref=e180]:
+                  - generic [ref=e181]: "0"
+                  - generic [ref=e182]: errores de doble booking
+              - generic [ref=e183]:
+                - generic [ref=e184]: n8n
+                - generic [ref=e185]: OpenAI
+                - generic [ref=e186]: WhatsApp
+                - generic [ref=e187]: Google Sheets
+                - generic [ref=e188]: Lovable
+          - generic [ref=e189]:
+            - article [ref=e190]:
+              - generic [ref=e191]:
+                - generic [ref=e196]: n8n · workflow
+                - img "Workflow n8n de análisis de feedback" [ref=e197]
+                - generic [ref=e198]:
+                  - generic [ref=e199]: "+5.000"
+                  - generic [ref=e200]: reviews clasificadas por mes
+              - generic [ref=e201]:
+                - generic [ref=e202]: Análisis de feedback · E-commerce
+                - heading "Agente que lee reviews y las clasifica" [level=3] [ref=e203]
+                - paragraph [ref=e204]: Un agente IA lee miles de reviews, las clasifica por tipo, detecta tendencias y arma un resumen ejecutivo semanal. Las críticas urgentes se escalan al instante.
+                - generic [ref=e205]:
+                  - generic [ref=e206]: n8n
+                  - generic [ref=e207]: OpenAI
+                  - generic [ref=e208]: Airtable
+                  - generic [ref=e209]: Slack
+                  - generic [ref=e210]: Gmail
+            - article [ref=e211]:
+              - generic [ref=e212]:
+                - generic [ref=e217]: n8n · workflow
+                - img "Workflow n8n de onboarding en ClickUp" [ref=e218]
+                - generic [ref=e219]:
+                  - generic [ref=e220]: 0 → 100
+                  - generic [ref=e221]: onboarding end-to-end
+              - generic [ref=e222]:
+                - generic [ref=e223]: SaaS B2B · Onboarding
+                - heading "De alta de cliente a tareas distribuidas en ClickUp" [level=3] [ref=e224]
+                - paragraph [ref=e225]: "Al crear un cliente nuevo se dispara el flujo: brief por Tally, datos a Airtable, mensaje de bienvenida y subtareas creadas en ClickUp para el equipo correspondiente."
+                - generic [ref=e226]:
+                  - generic [ref=e227]: n8n
+                  - generic [ref=e228]: Tally
+                  - generic [ref=e229]: Airtable
+                  - generic [ref=e230]: ClickUp
+                  - generic [ref=e231]: Gmail
+      - region "Plazos y precios visibles." [ref=e232]:
+        - generic [ref=e233]:
+          - generic [ref=e234]:
+            - generic [ref=e235]: Precios
+            - heading "Plazos y precios visibles." [level=2] [ref=e236]
+            - paragraph [ref=e237]: Sin propuestas de 6 meses. Cobramos por proyecto, no por hora arrastrada.
+          - generic [ref=e238]:
+            - article [ref=e239]:
+              - heading "Web + Admin" [level=3] [ref=e240]
+              - generic [ref=e241]:
+                - generic [ref=e242]: $500
+                - generic [ref=e243]: USD
+              - paragraph [ref=e244]: Tu sitio profesional con un panel de admin para gestionar tu negocio.
+              - list [ref=e245]:
+                - listitem [ref=e246]:
+                  - img [ref=e247]
+                  - generic [ref=e249]: Sitio web a medida
+                - listitem [ref=e250]:
+                  - img [ref=e251]
+                  - generic [ref=e253]: Panel de administración
+                - listitem [ref=e254]:
+                  - img [ref=e255]
+                  - generic [ref=e257]: Hosting + deploy incluido
+                - listitem [ref=e258]:
+                  - img [ref=e259]
+                  - generic [ref=e261]: 15 días de soporte
+                - listitem [ref=e262]:
+                  - img [ref=e263]
+                  - generic [ref=e265]: Documentación de uso
+              - link "Empezar →" [ref=e266] [cursor=pointer]:
+                - /url: "#contacto"
+            - article [ref=e267]:
+              - generic [ref=e268]: Recomendado
+              - heading "Web + Admin + Chatbot" [level=3] [ref=e269]
+              - generic [ref=e270]:
+                - generic [ref=e271]: $800
+                - generic [ref=e272]: USD
+              - paragraph [ref=e273]: El combo completo. Sitio, panel y un chatbot con IA atendiendo 24/7.
+              - list [ref=e274]:
+                - listitem [ref=e275]:
+                  - img [ref=e276]
+                  - generic [ref=e278]: Todo lo del plan Web + Admin
+                - listitem [ref=e279]:
+                  - img [ref=e280]
+                  - generic [ref=e282]: Chatbot con IA (Claude)
+                - listitem [ref=e283]:
+                  - img [ref=e284]
+                  - generic [ref=e286]: Integrado a WhatsApp
+                - listitem [ref=e287]:
+                  - img [ref=e288]
+                  - generic [ref=e290]: 30 días de soporte
+                - listitem [ref=e291]:
+                  - img [ref=e292]
+                  - generic [ref=e294]: Training a tu equipo
+              - link "Es lo que necesito →" [ref=e295] [cursor=pointer]:
+                - /url: "#contacto"
+            - article [ref=e296]:
+              - heading "Custom" [level=3] [ref=e297]
+              - generic [ref=e299]: A medida
+              - paragraph [ref=e300]: Automatizaciones complejas, integraciones, stack a definir y SLA.
+              - list [ref=e301]:
+                - listitem [ref=e302]:
+                  - img [ref=e303]
+                  - generic [ref=e305]: Diagnóstico completo
+                - listitem [ref=e306]:
+                  - img [ref=e307]
+                  - generic [ref=e309]: Stack a definir
+                - listitem [ref=e310]:
+                  - img [ref=e311]
+                  - generic [ref=e313]: Soporte continuo
+                - listitem [ref=e314]:
+                  - img [ref=e315]
+                  - generic [ref=e317]: SLA y monitoreo
+              - link "Hablemos →" [ref=e318] [cursor=pointer]:
+                - /url: "#contacto"
+      - region "¿Tenés un proceso que querés automatizar?" [ref=e319]:
+        - generic [ref=e320]:
+          - heading "¿Tenés un proceso que querés automatizar?" [level=2] [ref=e321]
+          - paragraph [ref=e322]: Contame de qué se trata. Primera llamada sin costo, sin compromiso.
+          - generic [ref=e323]:
+            - generic [ref=e324]:
+              - generic [ref=e325]:
+                - generic [ref=e326]: Nombre completo
+                - textbox "Nombre completo" [ref=e327]:
+                  - /placeholder: Nombre completo *
+              - generic [ref=e328]:
+                - generic [ref=e329]: Empresa o negocio (opcional)
+                - textbox "Empresa o negocio (opcional)" [ref=e330]:
+                  - /placeholder: Empresa / Negocio (opcional)
+            - generic [ref=e331]:
+              - generic [ref=e332]:
+                - generic [ref=e333]: Correo electrónico
+                - textbox "Correo electrónico" [ref=e334]:
+                  - /placeholder: Email *
+              - generic [ref=e335]:
+                - generic [ref=e336]: WhatsApp o teléfono (opcional)
+                - textbox "WhatsApp o teléfono (opcional)" [ref=e337]:
+                  - /placeholder: WhatsApp / Teléfono (opcional)
+            - generic [ref=e338]:
+              - generic [ref=e339]:
+                - generic [ref=e340]: Tipo de servicio
+                - combobox "Tipo de servicio" [ref=e341]:
+                  - option "¿Qué servicio te interesa? *" [disabled] [selected]
+                  - option "Automatización de procesos"
+                  - option "Sitio web o landing page"
+                  - option "Chatbot para WhatsApp / Telegram"
+                  - option "App o plataforma a medida"
+                  - option "Consultoría"
+                  - option "No sé aún"
+              - generic [ref=e342]:
+                - generic [ref=e343]: Presupuesto estimado (opcional)
+                - combobox "Presupuesto estimado (opcional)" [ref=e344]:
+                  - option "Presupuesto estimado (opcional)" [disabled] [selected]
+                  - option "Menos de $300 USD"
+                  - option "$300 – $800 USD"
+                  - option "$800 – $2.000 USD"
+                  - option "Más de $2.000 USD"
+                  - option "Todavía no lo sé"
+            - generic [ref=e345]:
+              - generic [ref=e346]: Descripción del proceso o problema
+              - textbox "Descripción del proceso o problema" [ref=e347]:
+                - /placeholder: Describí brevemente el proceso o problema *
+            - button "Enviar consulta" [ref=e348] [cursor=pointer]: Enviar consulta →
+          - generic [ref=e351]: ó
+          - generic [ref=e353]:
+            - link "Agendar llamada directamente en mi calendario" [ref=e354] [cursor=pointer]:
+              - /url: https://cal.com/martin-fisher-xnwssv
+              - text: Agendar llamada directamente en mi calendario →
+            - paragraph [ref=e355]: (Abre Cal.com en nueva pestaña)
+    - contentinfo [ref=e356]:
+      - generic [ref=e357]:
+        - generic [ref=e358]:
+          - generic [ref=e359]:
+            - generic [ref=e360]: "{ automatizaciones.dev }"
+            - paragraph [ref=e361]: Automatizaciones, chatbots y webs con IA. Hechas en Argentina, para PYMES de toda LATAM.
+          - generic [ref=e362]:
+            - heading "Servicios" [level=5] [ref=e363]
+            - link "Automatización" [ref=e364] [cursor=pointer]:
+              - /url: "#servicios"
+            - link "Chatbots" [ref=e365] [cursor=pointer]:
+              - /url: "#servicios"
+            - link "Consultoría" [ref=e366] [cursor=pointer]:
+              - /url: "#servicios"
+            - link "Webs" [ref=e367] [cursor=pointer]:
+              - /url: "#servicios"
+          - generic [ref=e368]:
+            - heading "Contacto" [level=5] [ref=e369]
+            - link "Agendar llamada" [ref=e370] [cursor=pointer]:
+              - /url: "#contacto"
+            - link "hola@automatizaciones.dev" [ref=e371] [cursor=pointer]:
+              - /url: mailto:hola@automatizaciones.dev
+          - generic [ref=e372]:
+            - heading "Encontrame" [level=5] [ref=e373]
+            - generic [ref=e374]:
+              - link "GitHub" [ref=e375] [cursor=pointer]:
+                - /url: https://github.com/martinfisher086-tech
+                - img [ref=e376]
+              - link "LinkedIn" [ref=e379] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/juan-manuel-castillo-4a8585360/
+                - img [ref=e380]
+              - link "Email" [ref=e384] [cursor=pointer]:
+                - /url: mailto:hola@automatizaciones.dev
+                - img [ref=e385]
+        - generic [ref=e388]:
+          - generic [ref=e389]: © 2026 · Juan Manuel Castillo
+          - generic [ref=e390]: Construido con Lovable + n8n + Claude

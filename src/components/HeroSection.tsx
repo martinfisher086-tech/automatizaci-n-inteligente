@@ -129,9 +129,9 @@ const HeroSection = () => {
 
           {/* Headline */}
           <h1 className="text-[clamp(2.5rem,6vw,4.5rem)] font-bold leading-[1.08] tracking-tight text-foreground">
-            Procesos repetitivos
+            Automatizaciones con IA
             <br />
-            <span className="gradient-text">que trabajan solos</span>.
+            <span className="gradient-text">que trabajan por vos</span>.
           </h1>
 
           {/* Subtitle */}
@@ -160,8 +160,8 @@ const HeroSection = () => {
           {/* Stats */}
           <div className="hero-stats mt-2">
             <div>
-              <b>+12</b>
-              <span>Procesos automatizados</span>
+              <b>+1.000h</b>
+              <span>Trabajo manual eliminado</span>
             </div>
             <div className="hero-stats-sep" aria-hidden="true" />
             <div>

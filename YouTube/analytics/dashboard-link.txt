@@ -1,0 +1,20 @@
+Dashboard Google Sheets — Canal YouTube
+=======================================
+
+URL del dashboard: [PENDIENTE — crear en Semana 1 del MVP]
+
+Instrucciones para crear:
+1. Ir a Google Sheets → Nuevo documento
+2. Nombrar: "Canal YouTube — Dashboard"
+3. Crear 4 pestañas:
+   - Videos: título, fecha pub, URL, views, likes, CTR, AVD, ingresos estimados
+   - Analytics: métricas semanales (subs ganados, views, watch time, impresiones)
+   - Afiliados: clicks, conversiones, ingresos por programa
+   - Sponsors: prospectos, estado, deals cerrados, ingresos
+
+4. Conectar con YouTube Analytics API (Sprint 4)
+5. Pegar URL aquí y en el dashboard-link.txt
+
+Acceso manual mientras no esté automatizado:
+→ YouTube Studio: https://studio.youtube.com
+→ YouTube Analytics: https://studio.youtube.com/channel/analytics

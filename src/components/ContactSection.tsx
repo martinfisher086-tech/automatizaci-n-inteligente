@@ -41,7 +41,6 @@ const ContactSection = () => {
     const phone = fd.get("phone")?.toString().trim() || "";
     if (phone && !/^[+\d\s\-()]{7,20}$/.test(phone)) e.phone = "Teléfono inválido";
     if (!fd.get("service")?.toString()) e.service = "Seleccioná un servicio";
-    if (!fd.get("message")?.toString().trim()) e.message = "Requerido";
     return e;
   };
 
@@ -57,9 +56,7 @@ const ContactSection = () => {
 
     setLoading(true);
     try {
-      const webhookUrl = import.meta.env.VITE_N8N_WEBHOOK_URL;
-      if (!webhookUrl) throw new Error("no_webhook_url");
-      const res = await fetch(webhookUrl, {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         signal: AbortSignal.timeout(10000),
@@ -75,14 +72,10 @@ const ContactSection = () => {
           source: "landing_contacto",
         }),
       });
-      if (!res.ok) throw new Error("webhook_error");
+      if (!res.ok) throw new Error("api_error");
       setSuccess(true);
-    } catch (err) {
-      if (err instanceof Error && err.message === "no_webhook_url") {
-        setSubmitError("El formulario no está configurado correctamente. Por favor contactame directamente.");
-      } else {
-        setSubmitError("Hubo un error al enviar.");
-      }
+    } catch {
+      setSubmitError("Hubo un error al enviar.");
     } finally {
       setLoading(false);
     }
@@ -94,9 +87,14 @@ const ContactSection = () => {
         <h2 id="contacto-heading" className="mb-3 text-center text-3xl font-bold text-foreground md:text-4xl">
           ¿Tenés un proceso que querés automatizar?
         </h2>
-        <p className="mb-10 text-center text-base text-muted-foreground">
+        <p className="mb-4 text-center text-base text-muted-foreground">
           Contame de qué se trata. Primera llamada sin costo, sin compromiso.
         </p>
+        <ul className="mb-10 flex flex-col gap-1.5 text-sm text-muted-foreground text-center" aria-label="Qué incluye">
+          <li><span className="font-semibold text-primary" aria-hidden="true">✓</span> Te respondo en menos de 24 horas</li>
+          <li><span className="font-semibold text-primary" aria-hidden="true">✓</span> Llamada de 20 minutos sin costo ni compromiso</li>
+          <li><span className="font-semibold text-primary" aria-hidden="true">✓</span> Diagnóstico de tu caso específico, sin propuestas genéricas</li>
+        </ul>
 
         {success ? (
           <div className="rounded-xl border border-[hsl(var(--success-subtle))] bg-card p-8 text-center space-y-4">
@@ -238,21 +236,17 @@ const ContactSection = () => {
               <textarea
                 id="contact-message"
                 name="message"
-                aria-required="true"
-                aria-describedby={errors.message ? "err-message" : undefined}
-                aria-invalid={!!errors.message}
                 rows={4}
                 maxLength={1000}
-                placeholder="Describí brevemente el proceso o problema *"
+                placeholder="Describí brevemente el proceso o problema (opcional)"
                 className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-colors resize-none"
               />
-              {errors.message && <p id="err-message" className="mt-1 text-xs text-destructive">{errors.message}</p>}
             </div>
 
             <button
               type="submit"
               disabled={loading}
-              className="w-full rounded-lg bg-primary py-3.5 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/85 disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background md:w-auto md:px-10"
+              className="w-full rounded-lg bg-primary py-3.5 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/85 disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               {loading ? (
                 <span className="inline-flex items-center gap-2">

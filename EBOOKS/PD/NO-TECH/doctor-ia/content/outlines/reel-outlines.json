@@ -1,0 +1,362 @@
+[
+  {
+    "id": "REEL-001",
+    "topic_es": "Cómo reconocer cuando tu ansiedad está hablando por ti",
+    "topic_en": "How to recognize when anxiety is speaking for you",
+    "pain_point": "People act on anxious thoughts without realizing it, mistaking anxiety for intuition",
+    "hook_es": "Ese pensamiento que no te deja dormir... ¿es intuición o es tu ansiedad inventando catástrofes?",
+    "hook_en": "That thought keeping you up at night... is it intuition or anxiety making up catastrophes?",
+    "value_points": [
+      "Anxiety thoughts have a pattern: they're always future-focused and certainty-seeking",
+      "The body gives you clues — chest tightness, shallow breath = anxiety signal",
+      "One grounding question: 'Is this happening right now, or am I imagining it?'"
+    ],
+    "cta_type": "ebook",
+    "cta_es": "Descarga el ebook gratis — enlace en bio. Herramienta #1 te explica cómo separar tu voz de la ansiedad.",
+    "cta_en": "Download the ebook — link in bio. Tool #1 teaches you how to separate your voice from anxiety.",
+    "format": "talking_head",
+    "priority": 5
+  },
+  {
+    "id": "REEL-002",
+    "topic_es": "La rutina matu tina de 10 minutos que regula tu sistema nervioso",
+    "topic_en": "The 10-minute morning routine that regulates your nervous system",
+    "pain_point": "Waking up already overwhelmed and reactive before the day even starts",
+    "hook_es": "Si lo primero que haces en la mañana es agarrar el teléfono, estás empezando el día en modo pánico.",
+    "hook_en": "If the first thing you do in the morning is grab your phone, you're starting the day in panic mode.",
+    "value_points": [
+      "60 seconds of slow exhales (longer than inhales) activates the parasympathetic nervous system",
+      "Setting one intention — not a to-do list — shifts your brain from reactive to responsive",
+      "2 minutes of sunlight or movement anchors your circadian rhythm and stabilizes mood"
+    ],
+    "cta_type": "follow",
+    "cta_es": "Sígueme para la rutina completa de 7 días. La publico esta semana.",
+    "cta_en": "Follow me for the full 7-day routine — I'm posting it this week.",
+    "format": "text_overlay",
+    "priority": 4
+  },
+  {
+    "id": "REEL-003",
+    "topic_es": "Por qué poner límites no es ser egoísta — es sobrevivir",
+    "topic_en": "Why setting boundaries isn't selfish — it's survival",
+    "pain_point": "Chronic over-giving and guilt when saying no, leading to resentment and burnout",
+    "hook_es": "Te enseñaron que decir NO era cruel. Nadie te dijo que decir siempre SÍ te estaba destruyendo.",
+    "hook_en": "You were taught that saying NO was cruel. Nobody told you that always saying YES was destroying you.",
+    "value_points": [
+      "A boundary is not a wall — it's a statement of what you need to stay healthy",
+      "Guilt after a boundary is normal; it doesn't mean the boundary was wrong",
+      "Start small: 'I can't today' is a complete sentence"
+    ],
+    "cta_type": "save",
+    "cta_es": "Guarda este video. La próxima vez que sientas culpa por decir no, vuelve a verlo.",
+    "cta_en": "Save this video. Next time you feel guilty for saying no, come back to it.",
+    "format": "talking_head",
+    "priority": 5
+  },
+  {
+    "id": "REEL-004",
+    "topic_es": "Las 5 señales silenciosas de que estás en burnout (no es solo cansancio)",
+    "topic_en": "5 silent signs you're in burnout (it's not just tiredness)",
+    "pain_point": "Dismissing burnout as laziness or weakness and pushing through until full collapse",
+    "hook_es": "El burnout no se ve como en las películas. Se ve como tú: funcional pero vacía por dentro.",
+    "hook_en": "Burnout doesn't look like the movies. It looks like you: functional but empty inside.",
+    "value_points": [
+      "Cynicism about things you used to love — that's emotional exhaustion, not attitude",
+      "Decision fatigue: even small choices feel impossible",
+      "Physical symptoms with no medical cause: headaches, digestion issues, constant tension"
+    ],
+    "cta_type": "ebook",
+    "cta_es": "El ebook tiene un capítulo completo sobre recuperación del burnout. $17 — enlace en bio.",
+    "cta_en": "The ebook has a full chapter on burnout recovery. $17 — link in bio.",
+    "format": "text_overlay",
+    "priority": 5
+  },
+  {
+    "id": "REEL-005",
+    "topic_es": "Cómo tus emociones afectan tu sueño (y qué hacer al respecto)",
+    "topic_en": "How your emotions affect your sleep (and what to do about it)",
+    "pain_point": "Lying awake with racing thoughts or waking at 3 AM with dread and no explanation",
+    "hook_es": "Si te despiertas a las 3am con el corazón acelerado, tu sistema nervioso tiene algo que decirte.",
+    "hook_en": "If you wake up at 3am with a racing heart, your nervous system is trying to tell you something.",
+    "value_points": [
+      "Cortisol peaks at night when emotional stress is unprocessed — that's the biology behind 3AM wake-ups",
+      "A 5-minute 'emotional download' journal before bed reduces nighttime activation",
+      "The 4-7-8 breathing method can interrupt the stress loop within 4 minutes"
+    ],
+    "cta_type": "save",
+    "cta_es": "Guarda esto para usarlo esta noche. El método completo está en el ebook.",
+    "cta_en": "Save this for tonight. The full method is in the ebook.",
+    "format": "voiceover_broll",
+    "priority": 4
+  },
+  {
+    "id": "REEL-006",
+    "topic_es": "Regulación del sistema nervioso: lo que nadie te enseñó en la escuela",
+    "topic_en": "Nervous system regulation: what nobody taught you in school",
+    "pain_point": "Feeling chronically \"on edge\" or emotionally explosive with no understanding of why",
+    "hook_es": "Nadie te enseñó que tienes un sistema nervioso que puedes aprender a controlar. Hasta hoy.",
+    "hook_en": "Nobody taught you that you have a nervous system you can learn to control. Until now.",
+    "value_points": [
+      "The autonomic nervous system runs in 3 states: safe, fight-or-flight, freeze — you can shift between them",
+      "Cold water on the face or wrists activates the dive reflex and drops heart rate within seconds",
+      "Humming, gargling, or singing stimulates the vagus nerve and promotes calm"
+    ],
+    "cta_type": "follow",
+    "cta_es": "Sígueme — cada semana comparto una herramienta nueva de regulación que realmente funciona.",
+    "cta_en": "Follow me — every week I share a new regulation tool that actually works.",
+    "format": "talking_head",
+    "priority": 4
+  },
+  {
+    "id": "REEL-007",
+    "topic_es": "Por qué siempre dices que sí cuando quieres decir que no",
+    "topic_en": "Why you always say yes when you mean no",
+    "pain_point": "People-pleasing behavior rooted in fear of rejection, conflict, or abandonment",
+    "hook_es": "Dices que sí con la boca y que no con el cuerpo. Y tu cuerpo siempre lleva la cuenta.",
+    "hook_en": "You say yes with your mouth and no with your body. And your body always keeps score.",
+    "value_points": [
+      "People-pleasing is a survival strategy — it protected you once, but it's costing you now",
+      "The pause technique: before answering any request, take 5 seconds to check in with your gut",
+      "Saying 'let me think about it' is a full answer that buys you time to respond honestly"
+    ],
+    "cta_type": "ebook",
+    "cta_es": "Herramienta #3 del ebook: cómo salir del modo complaciente sin perder tus relaciones. $17 — bio.",
+    "cta_en": "Tool #3 in the ebook: how to exit people-pleasing mode without losing your relationships. $17 — bio.",
+    "format": "talking_head",
+    "priority": 5
+  },
+  {
+    "id": "REEL-008",
+    "topic_es": "Cómo lidiar con los pensamientos intrusivos sin luchar contra ellos",
+    "topic_en": "How to handle intrusive thoughts without fighting them",
+    "pain_point": "Shame and exhaustion from trying to push away disturbing thoughts that keep returning",
+    "hook_es": "Cuanto más intentas NO pensar en algo, más lo piensas. Así funciona tu cerebro. Hay una salida.",
+    "hook_en": "The harder you try NOT to think about something, the more you think about it. That's your brain. There's a way out.",
+    "value_points": [
+      "Intrusive thoughts are noise, not instructions — the brain generates millions of random thoughts daily",
+      "Fighting them amplifies them; observing them defuses them (the 'leaves on a stream' technique)",
+      "Labeling the thought ('There's that anxious thought again') reduces its emotional charge by 40%"
+    ],
+    "cta_type": "save",
+    "cta_es": "Guarda este video. Los pensamientos intrusivos son más comunes de lo que crees.",
+    "cta_en": "Save this video. Intrusive thoughts are more common than you think.",
+    "format": "voiceover_broll",
+    "priority": 4
+  },
+  {
+    "id": "REEL-009",
+    "topic_es": "La conexión real entre tus emociones y lo que comes",
+    "topic_en": "The real connection between your emotions and what you eat",
+    "pain_point": "Eating to numb emotions and then feeling shame about it, creating a guilt cycle",
+    "hook_es": "No tienes falta de voluntad. Tienes emociones que nadie te enseñó a procesar. Y las estás comiendo.",
+    "hook_en": "You don't lack willpower. You have emotions nobody taught you to process. And you're eating them.",
+    "value_points": [
+      "Emotional eating is the brain seeking dopamine when it feels threatened — it's biological, not moral",
+      "The HALT check before eating: Am I Hungry, Angry, Lonely, or Tired?",
+      "Processing the emotion for 90 seconds (its natural biological lifespan) can break the craving cycle"
+    ],
+    "cta_type": "follow",
+    "cta_es": "Sígueme para más herramientas de bienestar emocional. Sin dietas. Sin culpa.",
+    "cta_en": "Follow me for more emotional wellness tools. No diets. No shame.",
+    "format": "talking_head",
+    "priority": 3
+  },
+  {
+    "id": "REEL-010",
+    "topic_es": "Lo que nadie te dice sobre el duelo (y por qué tarda tanto)",
+    "topic_en": "What nobody tells you about grief (and why it takes so long)",
+    "pain_point": "Feeling like something is wrong with you because you're still grieving or grief hits in waves unexpectedly",
+    "hook_es": "El duelo no es una línea recta. Y no hay una fecha de vencimiento para tu dolor.",
+    "hook_en": "Grief is not a straight line. And there's no expiration date on your pain.",
+    "value_points": [
+      "Grief is not only for death — it includes relationships, jobs, versions of yourself, dreams",
+      "Grief ambushes because memory and emotion are stored together; triggers are normal, not signs of weakness",
+      "Honoring grief instead of suppressing it actually shortens its intensity over time"
+    ],
+    "cta_type": "save",
+    "cta_es": "Guarda esto y compártelo con alguien que lo necesite. El duelo se carga mejor acompañado.",
+    "cta_en": "Save this and share it with someone who needs it. Grief is lighter when it's witnessed.",
+    "format": "talking_head",
+    "priority": 4
+  },
+  {
+    "id": "REEL-011",
+    "topic_es": "Autocompasión: la herramienta más poderosa que nunca te enseñaron",
+    "topic_en": "Self-compassion: the most powerful tool you were never taught",
+    "pain_point": "Inner critic so loud it prevents any progress, mistaking self-compassion for self-pity or weakness",
+    "hook_es": "Le hablarías así de cruel a tu mejor amiga? Entonces por qué te lo dices a ti misma todos los días.",
+    "hook_en": "Would you speak that cruelly to your best friend? Then why do you say it to yourself every day.",
+    "value_points": [
+      "Self-compassion is not lowering your standards — it's being your own coach instead of your own abuser",
+      "The self-compassion break: acknowledge suffering → remind yourself it's universal → offer kindness",
+      "Research shows self-compassion increases motivation and resilience more than self-criticism"
+    ],
+    "cta_type": "ebook",
+    "cta_es": "El ebook incluye el protocolo completo de autocompasión de Kristin Neff adaptado. Enlace en bio.",
+    "cta_en": "The ebook includes the full adapted Kristin Neff self-compassion protocol. Link in bio.",
+    "format": "talking_head",
+    "priority": 5
+  },
+  {
+    "id": "REEL-012",
+    "topic_es": "Cómo el estrés de pareja afecta tu cuerpo (aunque lo ignores)",
+    "topic_en": "How relationship stress affects your body (even when you ignore it)",
+    "pain_point": "Chronic low-grade relationship tension causing physical symptoms without connecting the dots",
+    "hook_es": "Ese dolor de cabeza que tienes todos los domingos en la noche no es coincidencia.",
+    "hook_en": "That headache you get every Sunday night is not a coincidence.",
+    "value_points": [
+      "Relationship stress is one of the strongest activators of the HPA (stress) axis — it's physical",
+      "Co-regulation: spending calm time with a safe person literally lowers your cortisol",
+      "Naming relationship emotions out loud (even to yourself) reduces the physiological stress response"
+    ],
+    "cta_type": "follow",
+    "cta_es": "Sígueme — la semana que viene hablo de comunicación emocional en pareja.",
+    "cta_en": "Follow me — next week I'm talking about emotional communication in relationships.",
+    "format": "voiceover_broll",
+    "priority": 3
+  },
+  {
+    "id": "REEL-013",
+    "topic_es": "El perfeccionismo no es un rasgo de personalidad — es una respuesta al miedo",
+    "topic_en": "Perfectionism isn't a personality trait — it's a response to fear",
+    "pain_point": "Unable to start or finish things because they will never be good enough, paralysis and procrastination",
+    "hook_es": "El perfeccionismo no te hace mejor. Te tiene paralizada. Y eso tiene una raíz emocional muy específica.",
+    "hook_en": "Perfectionism doesn't make you better. It keeps you paralyzed. And it has a very specific emotional root.",
+    "value_points": [
+      "Perfectionism is fear of judgment disguised as high standards — it's protective, not productive",
+      "The 80% rule: done at 80% quality creates more progress and learning than never-done at 100%",
+      "Ask: 'What am I protecting myself from if this isn't perfect?' — that's the real work"
+    ],
+    "cta_type": "save",
+    "cta_es": "Guarda esto. La próxima vez que te paralices, hazte esa pregunta.",
+    "cta_en": "Save this. Next time you freeze, ask yourself that question.",
+    "format": "talking_head",
+    "priority": 4
+  },
+  {
+    "id": "REEL-014",
+    "topic_es": "Por qué necesitas un detox digital y cómo hacerlo sin ansiedad",
+    "topic_en": "Why you need a digital detox and how to do it without anxiety",
+    "pain_point": "Phone addiction causing chronic overstimulation, comparison anxiety, and inability to be present",
+    "hook_es": "Revisaste tu teléfono 96 veces ayer. Tu cerebro no puede procesar tantas emociones en un día.",
+    "hook_en": "You checked your phone 96 times yesterday. Your brain cannot process that many emotions in one day.",
+    "value_points": [
+      "Every notification is a micro-stressor — accumulated, they keep your nervous system in low-grade alarm",
+      "Social media comparison activates the same brain regions as physical threat",
+      "The 'phone-free first hour' practice measurably reduces daily anxiety levels within one week"
+    ],
+    "cta_type": "follow",
+    "cta_es": "Sígueme y te comparto el plan de detox digital de 7 días esta semana.",
+    "cta_en": "Follow me and I'll share the 7-day digital detox plan this week.",
+    "format": "text_overlay",
+    "priority": 3
+  },
+  {
+    "id": "REEL-015",
+    "topic_es": "Vocabulario emocional: por qué 'estoy bien' no es suficiente",
+    "topic_en": "Emotional vocabulary: why 'I'm fine' isn't enough",
+    "pain_point": "Unable to identify or name emotions precisely, leading to poor communication and unmet needs",
+    "hook_es": "Si solo tienes 5 palabras para describir cómo te sientes, solo tienes 5 emociones que puedes resolver.",
+    "hook_en": "If you only have 5 words to describe how you feel, you only have 5 emotions you can solve.",
+    "value_points": [
+      "Emotional granularity — being specific about feelings — is linked to better mental health outcomes",
+      "The difference between 'sad' and 'disappointed vs. hopeless vs. lonely' changes what action you take",
+      "The feelings wheel: a tool that expands your emotional vocabulary in under 5 minutes"
+    ],
+    "cta_type": "ebook",
+    "cta_es": "El ebook incluye la rueda de emociones completa y cómo usarla. $17 — enlace en bio.",
+    "cta_en": "The ebook includes the full feelings wheel and how to use it. $17 — link in bio.",
+    "format": "text_overlay",
+    "priority": 3
+  },
+  {
+    "id": "REEL-016",
+    "topic_es": "Cuando la ansiedad se siente como un ataque al corazón: ataques de pánico explicados",
+    "topic_en": "When anxiety feels like a heart attack: panic attacks explained",
+    "pain_point": "Terror and confusion during panic attacks, often misdiagnosed or dismissed by self and others",
+    "hook_es": "Creías que te estabas muriendo. El médico dijo que estabas bien. Pero el terror era real. Esto es lo que pasó.",
+    "hook_en": "You thought you were dying. The doctor said you were fine. But the terror was real. Here's what happened.",
+    "value_points": [
+      "A panic attack is a false alarm: the body's threat response with no actual threat present",
+      "Fighting it intensifies it — the counterintuitive move is to allow it without adding fear",
+      "The 5-4-3-2-1 grounding technique anchors you to the present and interrupts the escalation cycle"
+    ],
+    "cta_type": "save",
+    "cta_es": "Guarda esto. Puede que lo necesites — o alguien que quieras lo necesite.",
+    "cta_en": "Save this. You might need it — or someone you love might need it.",
+    "format": "talking_head",
+    "priority": 5
+  },
+  {
+    "id": "REEL-017",
+    "topic_es": "La soledad no es estar sola — y cómo manejarla emocionalmente",
+    "topic_en": "Loneliness isn't being alone — and how to manage it emotionally",
+    "pain_point": "Feeling profoundly lonely even in relationships or social settings, with no language to explain it",
+    "hook_es": "Puedes estar rodeada de gente y sentirte absolutamente sola. Y eso es más común de lo que crees.",
+    "hook_en": "You can be surrounded by people and feel absolutely alone. And that's more common than you think.",
+    "value_points": [
+      "Loneliness is about felt disconnection, not physical isolation — you can feel it in a crowd or a marriage",
+      "The antidote is not more social contact, it's one authentic moment of being truly seen",
+      "Self-connection practice: daily check-ins with yourself reduce loneliness as effectively as socializing"
+    ],
+    "cta_type": "follow",
+    "cta_es": "Sígueme. Aquí encuentras un espacio que te entiende.",
+    "cta_en": "Follow me. Here you'll find a space that understands you.",
+    "format": "voiceover_broll",
+    "priority": 4
+  },
+  {
+    "id": "REEL-018",
+    "topic_es": "La rabia que no expresas: cómo el enojo reprimido daña tu cuerpo",
+    "topic_en": "The anger you don't express: how suppressed rage harms your body",
+    "pain_point": "Taught to suppress anger (especially as a woman) until it manifests as illness, depression, or explosion",
+    "hook_es": "Te enseñaron que la rabia era fea. Nadie te dijo que guardártela te estaba enfermando.",
+    "hook_en": "You were taught that anger was ugly. Nobody told you that holding it in was making you sick.",
+    "value_points": [
+      "Suppressed anger is linked to hypertension, autoimmune disorders, and depression in research studies",
+      "Anger is information: it signals a boundary was crossed or a need isn't being met",
+      "Healthy anger expression: name it, claim it, process it physically (movement), then respond — in that order"
+    ],
+    "cta_type": "save",
+    "cta_es": "Guarda esto. La rabia necesita un canal, no una prisión.",
+    "cta_en": "Save this. Anger needs a channel, not a prison.",
+    "format": "talking_head",
+    "priority": 4
+  },
+  {
+    "id": "REEL-019",
+    "topic_es": "El miedo al fracaso está matando tus sueños — y tiene una solución",
+    "topic_en": "Fear of failure is killing your dreams — and there's a solution",
+    "pain_point": "Not starting or giving up easily to avoid the pain of potential failure and judgment",
+    "hook_es": "No es que no tengas sueños. Es que el miedo a fallar es más fuerte que el deseo de lograrlo. Eso cambia hoy.",
+    "hook_en": "It's not that you don't have dreams. It's that the fear of failing is louder than the desire to succeed. That changes today.",
+    "value_points": [
+      "Fear of failure is fear of what failure means about you — it's identity-based, not logic-based",
+      "Reframing failure as data (not verdict) is a learnable cognitive skill, not toxic positivity",
+      "The 'failure resume': listing your failures and what you learned reduces fear by normalizing the experience"
+    ],
+    "cta_type": "ebook",
+    "cta_es": "Herramienta #6 del ebook es exactamente esto. $17 te cambia la relación con el fracaso. Enlace en bio.",
+    "cta_en": "Tool #6 in the ebook is exactly this. $17 changes your relationship with failure. Link in bio.",
+    "format": "talking_head",
+    "priority": 4
+  },
+  {
+    "id": "REEL-020",
+    "topic_es": "Inteligencia emocional básica: las 4 habilidades que nadie te enseñó",
+    "topic_en": "Emotional intelligence basics: the 4 skills nobody taught you",
+    "pain_point": "Reacting instead of responding, feeling out of control emotionally, damaging relationships without meaning to",
+    "hook_es": "La inteligencia emocional no es ser positiva todo el tiempo. Es ser honesta contigo misma cuando más duele.",
+    "hook_en": "Emotional intelligence isn't being positive all the time. It's being honest with yourself when it hurts the most.",
+    "value_points": [
+      "The 4 pillars: self-awareness → self-regulation → empathy → social skill — each is teachable",
+      "The 90-second rule: any emotion completes its biological cycle in 90 seconds if you don't re-trigger it",
+      "EQ is a skill set, not a personality type — you can measurably improve it with practice"
+    ],
+    "cta_type": "ebook",
+    "cta_es": "El ebook completo te da las 7 herramientas para construir tu inteligencia emocional. $17 — enlace en bio.",
+    "cta_en": "The full ebook gives you the 7 tools to build your emotional intelligence. $17 — link in bio.",
+    "format": "text_overlay",
+    "priority": 5
+  }
+]

@@ -1,0 +1,55 @@
+{
+  "agent": "voice-agent",
+  "description": "Convierte el guión de texto a audio MP3 usando ElevenLabs API",
+  "trigger": "Webhook desde Script Agent (guión aprobado)",
+  "provider": "ElevenLabs",
+
+  "voice_config": {
+    "recommended_voice_id": "pNInz6obpgDQGcFmaJgB",
+    "recommended_voice_name": "Adam (neutral español)",
+    "alternative_voice_id": "VR6AewLTigWG4xSOukaG",
+    "alternative_voice_name": "Arnold (más grave, autoridad)",
+    "language": "es",
+    "accent": "neutral-latam",
+    "notes": "Evitar voces con acento España (castellano). Preferir neutro o rioplatense leve."
+  },
+
+  "model_settings": {
+    "model_id": "eleven_multilingual_v2",
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.3,
+    "use_speaker_boost": true
+  },
+
+  "audio_settings": {
+    "output_format": "mp3_44100_128",
+    "target_loudness_lufs": -14,
+    "notes": "YouTube requiere -14 LUFS para normalización. Verificar con FFmpeg post-procesamiento."
+  },
+
+  "n8n_workflow": {
+    "step_1": "Recibir guión completo como texto plano (sin etiquetas de sección)",
+    "step_2": "Chunking: dividir en fragmentos de max 2.500 caracteres (límite ElevenLabs)",
+    "step_3": "HTTP Request POST a https://api.elevenlabs.io/v1/text-to-speech/{voice_id}",
+    "step_4": "Concatenar fragmentos de audio en orden",
+    "step_5": "Normalizar audio a -14 LUFS con FFmpeg",
+    "step_6": "Subir a Google Drive /YouTube/content/video-XXX/audio.mp3",
+    "step_7": "Retornar metadata: duración_segundos, tamaño_bytes, ruta_drive"
+  },
+
+  "quality_checks": {
+    "min_duration_seconds": 480,
+    "max_duration_seconds": 780,
+    "check_silence_at_start": true,
+    "check_silence_at_end": true,
+    "notes": "Si el audio dura menos de 8 min o más de 13 min, re-generar con guión ajustado"
+  },
+
+  "cost_estimate": {
+    "characters_per_video": 1800,
+    "cost_per_1k_chars_usd": 0.30,
+    "cost_per_video_usd": 0.54,
+    "monthly_cost_4_videos_usd": 2.16
+  }
+}
