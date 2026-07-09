@@ -1,0 +1,401 @@
+<title>DIM Centros de Salud — Análisis y oportunidades de automatización</title>
+<style>
+  :root {
+    --paper: #FBFBF9;
+    --ink: #18242E;
+    --muted: #5C6E7A;
+    --brand: #0F5E7A;
+    --brand-soft: #E4EEF2;
+    --line: #D9E1E5;
+    --amber: #B97A1E;
+    --amber-soft: #F6EBD9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #131A20;
+      --ink: #E5EBEF;
+      --muted: #93A4AF;
+      --brand: #5FB3CF;
+      --brand-soft: #1B2E38;
+      --line: #2A3842;
+      --amber: #D9A050;
+      --amber-soft: #33270F;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #131A20;
+    --ink: #E5EBEF;
+    --muted: #93A4AF;
+    --brand: #5FB3CF;
+    --brand-soft: #1B2E38;
+    --line: #2A3842;
+    --amber: #D9A050;
+    --amber-soft: #33270F;
+  }
+  :root[data-theme="light"] {
+    --paper: #FBFBF9;
+    --ink: #18242E;
+    --muted: #5C6E7A;
+    --brand: #0F5E7A;
+    --brand-soft: #E4EEF2;
+    --line: #D9E1E5;
+    --amber: #B97A1E;
+    --amber-soft: #F6EBD9;
+  }
+
+  html { background: var(--paper); }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+    font-size: 15px;
+    line-height: 1.55;
+    margin: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .doc {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 28px 72px;
+  }
+  h1, h2, h3, h4, .eyebrow, .meta, th, .chip, .ficha-head, .cover-kicker {
+    font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  h1 { font-size: 30px; line-height: 1.15; letter-spacing: -0.015em; margin: 10px 0 6px; text-wrap: balance; }
+  h2 { font-size: 20px; letter-spacing: -0.01em; margin: 0 0 14px; text-wrap: balance; }
+  h3 { font-size: 15.5px; margin: 22px 0 6px; }
+  p { margin: 0 0 12px; }
+  ul { margin: 0 0 12px; padding-left: 20px; }
+  li { margin-bottom: 5px; }
+  strong { color: var(--ink); }
+  a { color: var(--brand); }
+
+  .eyebrow {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--brand);
+    margin-bottom: 6px;
+  }
+  section { margin-top: 40px; }
+  .section-rule { border: 0; border-top: 2px solid var(--brand); width: 44px; margin: 0 0 18px; }
+
+  /* Cover block */
+  .cover { padding-bottom: 26px; border-bottom: 1px solid var(--line); }
+  .cover-kicker {
+    font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--muted);
+  }
+  .cover-sub { font-size: 16.5px; color: var(--muted); margin: 4px 0 22px; max-width: 56ch; }
+  .meta {
+    display: flex; flex-wrap: wrap; gap: 8px 28px;
+    font-size: 12.5px; color: var(--muted);
+  }
+  .meta b { color: var(--ink); font-weight: 600; }
+
+  /* Callout */
+  .callout {
+    background: var(--brand-soft);
+    border-left: 3px solid var(--brand);
+    padding: 12px 16px;
+    margin: 16px 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .callout p:last-child { margin-bottom: 0; }
+
+  /* Tables */
+  .tablewrap { overflow-x: auto; margin: 14px 0 6px; }
+  table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+  th {
+    text-align: left; font-size: 11px; font-weight: 600;
+    letter-spacing: 0.09em; text-transform: uppercase;
+    color: var(--muted); border-bottom: 2px solid var(--ink);
+    padding: 6px 10px 6px 0;
+  }
+  td { border-bottom: 1px solid var(--line); padding: 8px 10px 8px 0; vertical-align: top; }
+  td:last-child, th:last-child { padding-right: 0; }
+  .num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  .chip {
+    display: inline-block; font-size: 10.5px; font-weight: 600;
+    letter-spacing: 0.07em; text-transform: uppercase;
+    padding: 2px 8px; border-radius: 3px; white-space: nowrap;
+  }
+  .chip-hi   { background: var(--brand-soft); color: var(--brand); }
+  .chip-mid  { background: var(--amber-soft); color: var(--amber); }
+
+  /* Friction list */
+  .fric { display: grid; grid-template-columns: 26px 1fr; gap: 4px 12px; margin: 14px 0; }
+  .fric-n {
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 13px; font-weight: 700; color: var(--brand);
+    font-variant-numeric: tabular-nums;
+  }
+  .fric-t { font-weight: 700; }
+  .fric-d { grid-column: 2; color: var(--ink); margin-bottom: 10px; }
+  .fric-d .src { color: var(--muted); font-size: 13px; }
+
+  /* Proposal cards */
+  .ficha {
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 16px 18px 14px;
+    margin: 14px 0;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .ficha-head {
+    display: flex; align-items: baseline; gap: 10px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 8px; margin-bottom: 10px;
+  }
+  .ficha-id {
+    font-size: 12px; font-weight: 700; color: var(--brand);
+    letter-spacing: 0.06em;
+  }
+  .ficha-title { font-size: 15px; font-weight: 700; }
+  .ficha dl { margin: 0; display: grid; grid-template-columns: 92px 1fr; gap: 6px 14px; font-size: 13.8px; }
+  .ficha dt {
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 10.5px; font-weight: 600; letter-spacing: 0.09em;
+    text-transform: uppercase; color: var(--muted); padding-top: 2px;
+  }
+  .ficha dd { margin: 0; }
+
+  .foot {
+    margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--line);
+    font-size: 12px; color: var(--muted);
+  }
+
+  /* Print */
+  @page { size: A4; margin: 17mm 16mm; }
+  @media print {
+    :root, :root[data-theme="dark"] {
+      --paper: #FFFFFF; --ink: #18242E; --muted: #5C6E7A;
+      --brand: #0F5E7A; --brand-soft: #E4EEF2; --line: #C9D3D9;
+      --amber: #B97A1E; --amber-soft: #F6EBD9;
+    }
+    body { font-size: 11.2pt; }
+    .doc { max-width: none; padding: 0; }
+    section { margin-top: 22px; }
+    .pb { page-break-before: always; }
+    h2, h3 { page-break-after: avoid; }
+    .tablewrap, .callout, .fric { page-break-inside: avoid; }
+    a { color: var(--ink); text-decoration: none; }
+  }
+</style>
+
+<div class="doc">
+
+  <header class="cover">
+    <span class="cover-kicker">Documento de trabajo · Confidencial</span>
+    <h1>DIM Centros de Salud: análisis de situación y oportunidades de automatización inteligente</h1>
+    <p class="cover-sub">Diagnóstico del recorrido del paciente y de los procesos de atención, con seis propuestas concretas de mejora basadas en automatización (n8n) e inteligencia artificial aplicada.</p>
+    <div class="meta">
+      <span><b>Preparado por:</b> Martín Fisher</span>
+      <span><b>Fecha:</b> Julio 2026</span>
+      <span><b>Alcance:</b> análisis sobre información pública</span>
+    </div>
+  </header>
+
+  <section>
+    <span class="eyebrow">Resumen ejecutivo</span>
+    <hr class="section-rule">
+    <h2>La oportunidad en una página</h2>
+    <p>DIM es una institución líder de la zona oeste con más de 60 años de trayectoria, 16 centros y una apuesta digital real: app propia, portal de pacientes, WhatsApp oficial y resultados online. La base tecnológica ya existe. La oportunidad está en la <strong>capa de orquestación</strong>: los canales y sistemas actuales no siempre conversan entre sí, y eso genera fricciones visibles para el paciente (esperas en WhatsApp, turnos sin disponibilidad online, demoras en resultados) y costo operativo interno (call center saturado, reprocesos, reclamos).</p>
+    <div class="callout">
+      <p><strong>Tesis:</strong> sin reemplazar ningún sistema existente, una capa de automatización con n8n + agentes de IA puede conectar turnero, laboratorio, WhatsApp y back-office para que cada evento (un turno liberado, un informe firmado, una receta solicitada) dispare la acción correcta sin intervención manual. Primeros resultados medibles en 30–45 días.</p>
+    </div>
+    <ul>
+      <li><strong>Dónde duele hoy:</strong> acceso a turnos, tiempos de respuesta en canales digitales y comunicación proactiva con el paciente.</li>
+      <li><strong>Qué propongo:</strong> seis iniciativas priorizadas, empezando por dos quick wins de bajo riesgo (confirmación inteligente de turnos y base de conocimiento unificada).</li>
+      <li><strong>Cómo lo mediría:</strong> ausentismo, tiempo de primera respuesta, % de gestiones resueltas sin humano, reclamos públicos.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="eyebrow">Contexto</span>
+    <hr class="section-rule">
+    <h2>1. La institución, en números públicos</h2>
+    <div class="tablewrap">
+      <table>
+        <tr><th>Dimensión</th><th>Dato</th></tr>
+        <tr><td>Trayectoria</td><td>Fundada en 1964 en Ramos Mejía por el Dr. José María Paz; hoy referente de la zona oeste (razón social DIRM S.A.).</td></tr>
+        <tr><td>Escala</td><td class="num">16 centros (Ramos Mejía, Morón, Liniers, Caballito, Once) · +500 profesionales · todas las especialidades, baja a alta complejidad.</td></tr>
+        <tr><td>Servicios</td><td>Consultas, diagnóstico por imágenes, laboratorio (con extracciones a domicilio), odontología, cirugías, atención por demanda espontánea; nuevo servicio de Oncología con el Instituto Alexander Fleming.</td></tr>
+        <tr><td>Financiadores</td><td>Amplia cartilla: PAMI (libre elección), IOMA, IOSFA, ASI, AMFFA y convenios institucionales, entre otros.</td></tr>
+        <tr><td>Canales digitales</td><td>App DIM SALUD (turnos, resultados, recetas, certificados), portal.dim.com.ar con chat 24 hs, WhatsApp oficial con asistente virtual, central telefónica de turnos, email.</td></tr>
+        <tr><td>Comunidad</td><td class="num">~50.000 seguidores en Instagram · +70.000 en Facebook · ~19.500 en LinkedIn · Fundación DIM · sede UBA de residencia en Diagnóstico por Imágenes.</td></tr>
+      </table>
+    </div>
+    <p>La lectura importante: DIM ya decidió ser una institución digital — su propio lema en redes es <em>“Te cuidamos hoy, con la tecnología del mañana”</em>. Este documento parte de esa decisión y propone el siguiente paso natural.</p>
+  </section>
+
+  <section>
+    <span class="eyebrow">Diagnóstico</span>
+    <hr class="section-rule">
+    <h2>2. Fricciones detectadas en el recorrido del paciente</h2>
+    <p>Relevé señales públicas (reseñas de la app, plataformas de reclamos, redes) y las ordené por etapa del recorrido. No son juicios sobre la operación interna — que seguramente tiene explicaciones y matices — sino los puntos donde el paciente hoy percibe fricción, y donde la automatización tiene más para aportar.</p>
+
+    <div class="fric">
+      <span class="fric-n">01</span><span class="fric-t">Acceso: el WhatsApp deriva, pero la cola no cierra el ciclo</span>
+      <p class="fric-d">El asistente virtual toma el contacto pero, según reclamos públicos reiterados, la derivación a operador queda sin respuesta durante horas. El paciente reintenta por teléfono o va a la sede: el mismo caso cuesta tres veces. <span class="src">Fuente: reclamos en tuQuejaSuma, 2024–2026.</span></p>
+
+      <span class="fric-n">02</span><span class="fric-t">Turnos: disponibilidad online que no refleja la capacidad real</span>
+      <p class="fric-d">Pacientes reportan que ciertas especialidades (ecografía, ginecología) no muestran turnos en el canal online pese a ofrecerse en varios centros, y bugs puntuales de la app al seleccionar turno. La capacidad existe; el canal no siempre la expone. <span class="src">Fuente: reclamos públicos y reseñas de la app.</span></p>
+
+      <span class="fric-n">03</span><span class="fric-t">Agenda: cancelaciones sin aviso y ausentismo</span>
+      <p class="fric-d">Hay reclamos por turnos cancelados sin notificación previa. La contracara —pacientes que no asisten— es el costo silencioso de toda agenda médica: los benchmarks del sector en Argentina ubican el ausentismo entre 20 y 30% cuando no hay confirmación activa.</p>
+
+      <span class="fric-n">04</span><span class="fric-t">Resultados: el paciente pregunta en lugar de ser avisado</span>
+      <p class="fric-d">Los resultados están 100% online (fortaleza real), pero hay reclamos por demoras y por estudios que no aparecen, con teléfonos y mensajería sin respuesta para consultarlo. Falta el eslabón proactivo: que el sistema avise cuando el informe está firmado, y que alguien vea internamente los que exceden el plazo.</p>
+
+      <span class="fric-n">05</span><span class="fric-t">Recetas y autorizaciones: solicitudes sin estado visible</span>
+      <p class="fric-d">La app permite pedir receta digital, pero existen reclamos por solicitudes sin respuesta. El paciente no tiene forma de saber si su pedido está en curso, demorado o rechazado — y cada consulta de estado vuelve a cargar el call center.</p>
+
+      <span class="fric-n">06</span><span class="fric-t">Información inconsistente entre canales</span>
+      <p class="fric-d">Reclamos mencionan información distinta según se consulte al call center, a la sede o al chat (coberturas, preparaciones de estudios, horarios). Cada canal responde con su propia fuente; no hay una base de conocimiento única que alimente a todos.</p>
+
+      <span class="fric-n">07</span><span class="fric-t">Reputación digital sin circuito de recuperación</span>
+      <p class="fric-d">Las quejas se acumulan en plataformas públicas y reseñas, muchas veces por casos que eran recuperables si alguien los detectaba a tiempo. No se observa un circuito sistemático de escucha, respuesta y recupero del paciente insatisfecho.</p>
+    </div>
+
+    <div class="callout">
+      <p><strong>Patrón común:</strong> ninguna de estas fricciones es un problema de falta de sistemas — turnero, laboratorio, app y WhatsApp ya existen. Son problemas de <strong>eventos que no viajan entre sistemas</strong> y de <strong>ciclos que no cierran</strong>. Exactamente el tipo de problema que resuelve una capa de orquestación.</p>
+    </div>
+  </section>
+
+  <section class="pb">
+    <span class="eyebrow">Priorización</span>
+    <hr class="section-rule">
+    <h2>3. Seis iniciativas, ordenadas por impacto y esfuerzo</h2>
+    <div class="tablewrap">
+      <table>
+        <tr><th>#</th><th>Iniciativa</th><th>Fricción que ataca</th><th>Impacto</th><th>Esfuerzo</th><th>Horizonte</th></tr>
+        <tr><td class="num">P1</td><td>Confirmación inteligente de turnos + lista de espera</td><td class="num">02 · 03</td><td><span class="chip chip-hi">Alto</span></td><td>Bajo</td><td class="num">Semanas 3–6</td></tr>
+        <tr><td class="num">P2</td><td>Base de conocimiento única (RAG) para todos los canales</td><td class="num">06 · 01</td><td><span class="chip chip-hi">Alto</span></td><td>Bajo</td><td class="num">Semanas 3–6</td></tr>
+        <tr><td class="num">P3</td><td>Agente IA en WhatsApp con acceso real al turnero</td><td class="num">01 · 02</td><td><span class="chip chip-hi">Alto</span></td><td>Medio</td><td class="num">Semanas 7–10</td></tr>
+        <tr><td class="num">P4</td><td>Entrega proactiva de resultados + control de SLA interno</td><td class="num">04</td><td><span class="chip chip-hi">Alto</span></td><td>Medio</td><td class="num">Semanas 7–10</td></tr>
+        <tr><td class="num">P5</td><td>Circuito de recetas y autorizaciones con estado visible</td><td class="num">05</td><td><span class="chip chip-mid">Medio</span></td><td>Medio</td><td class="num">Semanas 11–13</td></tr>
+        <tr><td class="num">P6</td><td>Voz del paciente: encuestas, alertas y tablero operativo</td><td class="num">07</td><td><span class="chip chip-mid">Medio</span></td><td>Bajo</td><td class="num">Semanas 11–13</td></tr>
+      </table>
+    </div>
+    <p style="color: var(--muted); font-size: 13.5px;">Segunda ola (a validar con el equipo): automatización de back-office (validación de órdenes y autorizaciones de financiadores, digitalización de órdenes en papel, control de débitos) y onboarding automatizado de personal y profesionales — dos áreas donde ya tengo proyectos implementados.</p>
+  </section>
+
+  <section>
+    <span class="eyebrow">Propuestas</span>
+    <hr class="section-rule">
+    <h2>4. Fichas de propuesta</h2>
+
+    <div class="ficha">
+      <div class="ficha-head"><span class="ficha-id">P1</span><span class="ficha-title">Confirmación inteligente de turnos y lista de espera automática</span></div>
+      <dl>
+        <dt>Problema</dt><dd>Ausentismo sin gestión activa; cancelaciones que dejan huecos muertos en agenda; pacientes cancelados sin aviso.</dd>
+        <dt>Solución</dt><dd>Workflow n8n conectado a la agenda: recordatorio por WhatsApp a las 48 y 24 hs con respuesta de un toque (confirmo / reprogramo / cancelo). Cada hueco liberado se ofrece automáticamente al primer paciente compatible de la lista de espera. Si un profesional cancela su agenda, todos sus pacientes reciben aviso y opciones de reprogramación en minutos.</dd>
+        <dt>Impacto</dt><dd>Reducciones típicas del 30–50% del ausentismo con confirmación activa; agenda más llena con la misma estructura; elimina la queja pública más sensible (cancelación sin aviso).</dd>
+        <dt>Medición</dt><dd>Tasa de no-show, % de huecos reasignados, turnos reconfirmados por semana.</dd>
+      </dl>
+    </div>
+
+    <div class="ficha">
+      <div class="ficha-head"><span class="ficha-id">P2</span><span class="ficha-title">Base de conocimiento única con IA (RAG) para todos los canales</span></div>
+      <dl>
+        <dt>Problema</dt><dd>Call center, sedes y chat responden distinto sobre coberturas, preparaciones de estudios y horarios.</dd>
+        <dt>Solución</dt><dd>Consolidar en una base única el contenido que ya existe (preparaciones, cartilla, horarios por sede, requisitos por financiador) y exponerla vía IA con recuperación de contexto: el mismo motor responde al asistente de WhatsApp, al chat del portal y a una consola interna para operadores del call center.</dd>
+        <dt>Impacto</dt><dd>Respuesta consistente en todos los canales; operadores nuevos productivos en días; menos llamadas repetidas por información errónea.</dd>
+        <dt>Medición</dt><dd>Precisión de respuestas auditadas, tiempo medio de atención del call center, recontactos por el mismo motivo.</dd>
+      </dl>
+    </div>
+
+    <div class="ficha">
+      <div class="ficha-head"><span class="ficha-id">P3</span><span class="ficha-title">Agente de IA en WhatsApp con acceso real al turnero</span></div>
+      <dl>
+        <dt>Problema</dt><dd>El asistente actual deriva a operadores que no llegan a responder; el paciente abandona el canal.</dd>
+        <dt>Solución</dt><dd>Agente conversacional (Claude) orquestado con n8n sobre la API de WhatsApp Business, con herramientas conectadas al turnero: consulta disponibilidad real por especialidad y sede, reserva, reprograma y cancela, informa preparaciones. Deriva a humano solo los casos que lo requieren, con cola priorizada, SLA visible y contexto completo de la conversación para el operador.</dd>
+        <dt>Impacto</dt><dd>Atención 24/7 real; resolución sin humano de la mayoría de las gestiones de turnos (benchmark del sector: 60–80%); descompresión inmediata del call center.</dd>
+        <dt>Medición</dt><dd>% de gestiones resueltas sin operador, tiempo de primera respuesta, abandono de conversación, NPS del canal.</dd>
+      </dl>
+    </div>
+
+    <div class="ficha">
+      <div class="ficha-head"><span class="ficha-id">P4</span><span class="ficha-title">Entrega proactiva de resultados y control interno de demoras</span></div>
+      <dl>
+        <dt>Problema</dt><dd>El paciente pregunta por sus resultados en lugar de ser avisado; los estudios demorados se descubren por reclamo.</dd>
+        <dt>Solución</dt><dd>Cuando el informe se firma en el sistema de laboratorio/imágenes, n8n notifica al paciente por WhatsApp con acceso seguro y avisa a su médico si corresponde. En paralelo, un monitor interno alerta al sector cuando un estudio supera su plazo esperado — la demora se gestiona antes de que el paciente la sufra.</dd>
+        <dt>Impacto</dt><dd>Menos llamadas entrantes de consulta de estado; demoras detectadas internamente en lugar de en redes; percepción de servicio moderno.</dd>
+        <dt>Medición</dt><dd>Tiempo informe firmado → paciente notificado, estudios fuera de SLA detectados internamente vs. por reclamo.</dd>
+      </dl>
+    </div>
+
+    <div class="ficha">
+      <div class="ficha-head"><span class="ficha-id">P5</span><span class="ficha-title">Circuito de recetas y autorizaciones con estado visible</span></div>
+      <dl>
+        <dt>Problema</dt><dd>Solicitudes de receta digital sin respuesta ni estado consultable; cada “¿cómo va mi pedido?” es una llamada más.</dd>
+        <dt>Solución</dt><dd>Intake estructurado (app/WhatsApp) con validación automática de datos y cobertura, ruteo al profesional correcto, recordatorios internos por SLA y notificación automática al paciente en cada cambio de estado: recibido, en revisión, emitida, rechazada con motivo.</dd>
+        <dt>Impacto</dt><dd>Cierra un ciclo hoy abierto; elimina una fuente completa de reclamos y llamadas.</dd>
+        <dt>Medición</dt><dd>Tiempo de ciclo de receta, % de solicitudes vencidas de SLA, llamadas por consulta de estado.</dd>
+      </dl>
+    </div>
+
+    <div class="ficha">
+      <div class="ficha-head"><span class="ficha-id">P6</span><span class="ficha-title">Voz del paciente: encuestas post-atención, alertas y tablero</span></div>
+      <dl>
+        <dt>Problema</dt><dd>La insatisfacción se conoce cuando ya es un reclamo público; la dirección no tiene métricas de experiencia en tiempo real.</dd>
+        <dt>Solución</dt><dd>Encuesta breve automática post-atención por WhatsApp; análisis de sentimiento con IA sobre respuestas y menciones; alerta inmediata al responsable cuando aparece un detractor, con el caso y su historia; tablero para dirección con NPS, ausentismo, tiempos de respuesta y volumen por canal.</dd>
+        <dt>Impacto</dt><dd>Casos recuperados antes de escalar a queja pública; decisiones de operación basadas en datos frescos.</dd>
+        <dt>Medición</dt><dd>NPS por sede y servicio, % de detractores contactados en &lt;24 hs, evolución de reclamos públicos.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="pb">
+    <span class="eyebrow">Plan</span>
+    <hr class="section-rule">
+    <h2>5. Hoja de ruta: primeros 90 días</h2>
+    <div class="tablewrap">
+      <table>
+        <tr><th>Fase</th><th>Semanas</th><th>Qué se hace</th><th>Entregable medible</th></tr>
+        <tr>
+          <td>Discovery</td><td class="num">1–2</td>
+          <td>Shadowing en call center y sedes; mapa real de sistemas (turnero, laboratorio, app, telefonía) y sus puntos de integración; línea base de métricas.</td>
+          <td>Mapa de procesos y sistemas + métricas base acordadas.</td>
+        </tr>
+        <tr>
+          <td>Quick wins</td><td class="num">3–6</td>
+          <td>P1 (confirmación de turnos + lista de espera) en una sede piloto. P2 (base de conocimiento) alimentando la consola del call center.</td>
+          <td>Ausentismo del piloto vs. línea base; auditoría de consistencia de respuestas.</td>
+        </tr>
+        <tr>
+          <td>Escalado</td><td class="num">7–10</td>
+          <td>P3 (agente WhatsApp) en piloto controlado con derivación a humano supervisada. P4 (resultados proactivos) para laboratorio.</td>
+          <td>% de gestiones sin operador; tiempo informe → notificación.</td>
+        </tr>
+        <tr>
+          <td>Consolidación</td><td class="num">11–13</td>
+          <td>P5 (recetas) y P6 (voz del paciente + tablero). Extensión de pilotos exitosos al resto de las sedes.</td>
+          <td>Tablero operativo en uso por dirección; plan de rollout 2027.</td>
+        </tr>
+      </table>
+    </div>
+    <h3>Principios de trabajo</h3>
+    <ul>
+      <li><strong>Integrar, no reemplazar:</strong> todo se construye sobre los sistemas que DIM ya tiene, vía API y eventos. Cero migraciones forzadas.</li>
+      <li><strong>Humano en el circuito:</strong> la IA resuelve lo repetitivo y prepara el contexto; las decisiones clínicas y los casos sensibles siempre llegan a una persona.</li>
+      <li><strong>Datos de salud con máximo cuidado:</strong> cumplimiento de la Ley 25.326 de Protección de Datos Personales (los datos de salud son datos sensibles), acceso mínimo necesario, trazabilidad de cada automatización.</li>
+      <li><strong>Medir antes y después:</strong> cada iniciativa arranca con línea base y se juzga por su métrica, no por la demo.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="eyebrow">Sobre este trabajo</span>
+    <hr class="section-rule">
+    <h2>6. Quién lo propone y con qué base</h2>
+    <p>Trabajo diseñando e implementando automatizaciones de procesos con <strong>n8n</strong> y desarrollo asistido por IA con <strong>Claude</strong>, con proyectos entregados que van desde chatbots conversacionales con integración a sistemas de gestión hasta circuitos completos de onboarding. Mi enfoque es el que refleja este documento: entender el proceso primero, automatizar lo que se repite, medir el resultado.</p>
+    <p class="foot">Nota metodológica: este análisis se elaboró exclusivamente con información pública (sitio y portal de DIM, tiendas de aplicaciones, plataformas de reclamos, prensa y redes sociales) entre el 6 y el 8 de julio de 2026. Los diagnósticos son hipótesis de trabajo a validar con el equipo de DIM; las cifras de benchmark corresponden al sector salud argentino y no a mediciones internas de la institución.</p>
+  </section>
+
+</div>
